@@ -1,0 +1,11 @@
+[
+    {
+      "description": "这是第一个moco操作,格式要写正确，中括号、大括号一定要有，description是描述，request是请求，uri是请求路径，response是返回结果，text是返回的是文本类型内容",
+      "request": {
+        "uri": "/demo"
+      },
+      "response": {
+        "text": "this is the noparame-get moco demo"
+      }
+    }
+  ]
