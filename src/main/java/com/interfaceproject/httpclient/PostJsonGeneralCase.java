@@ -19,7 +19,7 @@ public class PostJsonGeneralCase {
      * @date 2020年4月28日
      */
     @Test
-    public void doPostCase5() {
+    public void doPostCase() {
 
         String url = "http://127.0.0.1:8081/postjson";
 
@@ -28,15 +28,20 @@ public class PostJsonGeneralCase {
         Map<String,Object> map = new HashMap<>();
         map.put("name","czy");
         map.put("age","29");
+
         HxHttpClient hxHttpClient = HxHttpClient.getInstance();
         hxHttpClient.config(url, "POST", map);
         HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
-        //断言状态是否成功
+        //断言HTTP状态200
         Assert.assertEquals(String.valueOf(hxHttpClientResponseData.getCode()),"200");
+        //断言response响应参数是否符合预期结果,content是为了统一业务处理的参数定义
+        try {
+            Assert.assertEquals(JsonUtils.json2map(hxHttpClientResponseData.getContent()).get("error"),"200");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println(JsonUtils.obj2json(hxHttpClientResponseData));
         System.out.println(hxHttpClientResponseData.getContent());
-        //旧的方法
-//        post(httpPost, requestEntity);
     }
 
     /**
