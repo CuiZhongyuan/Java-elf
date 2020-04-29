@@ -1,0 +1,28 @@
+[
+  {
+    "description":"这是一个request请求中带cookies、使用json格式传参、返回结果为json格式的post请求",
+    "request":{
+      "uri":"/postwithcookiesandjson",
+      "method":"post",
+      "cookies":{
+        "login":"true"
+      },
+      "json":{
+        "name":"czy",
+        "age":"29"
+      }
+    },
+    "response":{
+      "status":200,
+      "json":{
+        "code":"0",
+        "msg":"success",
+        "p2pdata":{
+          "name":"czy",
+          "address":"beijing"
+        }
+
+      }
+    }
+  }
+  ]

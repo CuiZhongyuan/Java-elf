@@ -1,0 +1,21 @@
+[
+  {
+    "description":"模拟重定向接口",
+    "request":{
+      "uri":"/redirectto"
+    },
+    "redirectTo":"/redirectedpath"
+  },
+  {
+    "description":"模拟被重定向的接口",
+    "request":{
+      "uri":"/redirectedpath"
+    },
+    "response":{
+      "text":"返回重定向结果",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  }
+]
