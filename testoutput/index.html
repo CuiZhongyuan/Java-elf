@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 29, 2020 03:36:23 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 9, 2020 04:40:47 PM</span>
 				</a>
 			</li>
 			<li>
@@ -125,10 +125,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -140,10 +140,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -160,15 +160,15 @@
 				
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>postCase1</span>
-						<span class='test-time'>Apr 29, 2020 03:36:23 PM</span>
+						<span class='test-name'>postCase3</span>
+						<span class='test-time'>May 9, 2020 04:40:49 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2020 03:36:23 PM</span>
-	<span class='label end-time'>Apr 29, 2020 03:36:24 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+591ms</span>
+	<span class='label start-time'>May 9, 2020 04:40:49 PM</span>
+	<span class='label end-time'>May 9, 2020 04:40:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+7ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -182,14 +182,15 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>3:36:24 PM</td>
-					<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [500]
+					<td class='timestamp'>4:40:50 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [300] but found [200]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:575)
 	at org.testng.Assert.assertEquals(Assert.java:585)
-	at testcase.PostListCase.postCase1(PostListCase.java:45)
+	at testcase.PostListCase.case2(PostListCase.java:147)
+	at testcase.PostListCase.postCase3(PostListCase.java:95)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -228,15 +229,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>postCase2</span>
-						<span class='test-time'>Apr 29, 2020 03:36:24 PM</span>
+						<span class='test-name'>postCase1</span>
+						<span class='test-time'>May 9, 2020 04:40:47 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2020 03:36:24 PM</span>
-	<span class='label end-time'>Apr 29, 2020 03:36:24 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+68ms</span>
+	<span class='label start-time'>May 9, 2020 04:40:47 PM</span>
+	<span class='label end-time'>May 9, 2020 04:40:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+631ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -250,7 +251,41 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>3:36:24 PM</td>
+					<td class='timestamp'>4:40:50 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>postCase2</span>
+						<span class='test-time'>May 9, 2020 04:40:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2020 04:40:49 PM</span>
+	<span class='label end-time'>May 9, 2020 04:40:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+56ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:40:50 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -326,15 +361,16 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Apr 29, 2020 03:36:23 PM</td>
-                                                        <td class='linked' test-id='1'>postCase1</td>
-                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [500]
+                                                        <td>May 9, 2020 04:40:49 PM</td>
+                                                        <td class='linked' test-id='1'>postCase3</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [300] but found [200]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:575)
 	at org.testng.Assert.assertEquals(Assert.java:585)
-	at testcase.PostListCase.postCase1(PostListCase.java:45)
+	at testcase.PostListCase.case2(PostListCase.java:147)
+	at testcase.PostListCase.postCase3(PostListCase.java:95)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -388,31 +424,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 29, 2020 03:36:23 PM</div>
+					<div class='panel-lead'>May 9, 2020 04:40:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 29, 2020 03:36:24 PM</div>
+			 		<div class='panel-lead'>May 9, 2020 04:40:49 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>1,591ms</div>
+					<div class='panel-lead'>1,631ms</div>
 				</div>
 			</div>
 		</div>
@@ -425,7 +461,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
+				passParent: 2,
 				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
@@ -433,7 +469,7 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 1,
+				passChild: 2,
 				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,

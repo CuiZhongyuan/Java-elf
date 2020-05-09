@@ -44,6 +44,37 @@ public class PostJsonGeneralCase {
         System.out.println(hxHttpClientResponseData.getContent());
     }
 
+
+
+    /**
+     * POST---head里有签名认证用例--eg:headers里常放session、token、JTW
+     *@author czy
+     * @date 2020年4月28日
+     */
+    @Test
+    public void postCase2(){
+        String url = "http://127.0.0.1:8082/postheaders";
+
+        //定义headers签名类型,headers的value自定义，模拟数据用json-paramaters-haveheaders-post.json数据
+        Map<String,String> headers = new HashMap<>();
+        headers.put("token","123456789%");
+
+        HxHttpClient hxHttpClient = HxHttpClient.getInstance();
+        Map<String,Object> map = new HashMap<>();
+        map.put("data","20200509");
+        map.put("age","29");
+        hxHttpClient.config(url,"post",map);
+        //这里注意header位置，需要位于config方法之后
+        hxHttpClient.header(headers);
+        HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
+        //断言http返回的状态码是否为200, getcode是int类型，需要强转下string类型
+        Assert.assertEquals(String.valueOf(hxHttpClientResponseData.getCode()),"200");
+        //输出做下json格式打印
+        System.out.println(JsonUtils.jsonFormatter(hxHttpClientResponseData.getContent()));
+
+    }
+
+
     /**
      * hxHttpClient.config的Object params类型测试，map类型和javabean类型
      * */

@@ -1,9 +1,6 @@
 package testcase;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
+
 import com.interfaceproject.utils.HxHttpClient;
 import com.interfaceproject.utils.HxHttpClientResponseData;
 import com.interfaceproject.utils.JsonUtils;
@@ -13,10 +10,10 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-@SuppressWarnings("ALL")
+
 public class PostListCase {
 
-    String url = "http://127.0.0.1:8081/postheaders";
+//    String url = "http://127.0.0.1:8081/postjson";
 
 
     /**
@@ -27,6 +24,8 @@ public class PostListCase {
     @Test
     public void  postCase1(){
 
+        String url = "http://127.0.0.1:8090/postjson";
+
         //传入参数
         Map<String,Object> map = new HashMap<>();
         map.put("name","czy");
@@ -34,7 +33,7 @@ public class PostListCase {
         //创建HxHttpClient对象
         HxHttpClient hxHttpClient =  HxHttpClient.getInstance();
         //传入请求的url、参数
-        hxHttpClient.config(url,"post",map);
+        hxHttpClient.config(url,"POST",map);
         // 接收响应参数
         HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
         //接收业务统一处理参数
@@ -59,6 +58,7 @@ public class PostListCase {
      */
     @Test
     public void postCase2(){
+        String url = "http://127.0.0.1:8082/postheaders";
 
         //定义headers签名类型,headers的value自定义，模拟数据用json-paramaters-haveheaders-post.json数据
         Map<String,String> headers = new HashMap<>();
@@ -66,7 +66,7 @@ public class PostListCase {
 
         HxHttpClient hxHttpClient = HxHttpClient.getInstance();
         Map<String,Object> map = new HashMap<>();
-        map.put("name","czy");
+        map.put("data","20200509");
         map.put("age","29");
         hxHttpClient.config(url,"post",map);
         //这里注意header位置，需要位于config方法之后
@@ -76,7 +76,80 @@ public class PostListCase {
         Assert.assertEquals(String.valueOf(hxHttpClientResponseData.getCode()),"200");
         //输出做下json格式打印
         System.out.println(JsonUtils.jsonFormatter(hxHttpClientResponseData.getContent()));
+    }
+
+
+
+    /**
+     * POST---上一个请求返回的某个参数作为下一个请求的入参参数
+     *@author czy
+     * @date 2020年05月09日
+     */
+    @Test
+    public void  postCase3() throws Exception {
+
+
+        String data = case1();
+        Thread.sleep(1000);
+        // todo
+        case2(data);
 
     }
+
+    private String case1() throws Exception {
+
+        String url = "http://127.0.0.1:8090/postjson";
+
+        //传入参数
+        Map<String,Object> map = new HashMap<>();
+        map.put("name","czy");
+        map.put("age","29");
+        //创建HxHttpClient对象
+        HxHttpClient hxHttpClient =  HxHttpClient.getInstance();
+        //传入请求的url、参数
+        hxHttpClient.config(url,"POST",map);
+        // 接收响应参数
+        HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
+        //接收业务统一处理参数
+        String responseContent = hxHttpClientResponseData.getContent();
+        System.out.println(hxHttpClientResponseData);
+        System.out.println(JsonUtils.jsonFormatter(hxHttpClientResponseData.getContent()));
+        System.out.println("=======================================");
+        //断言http状态码200,getcode是int类型，需要强转下string类型
+        Assert.assertEquals(String.valueOf(hxHttpClientResponseData.getCode()),"200");
+        //断言业务参数响应是否与预期结果一直,这里通过JsonUtils工具类获取map中的参数error与预期1000对比
+        try {
+            Assert.assertEquals(JsonUtils.json2map(hxHttpClientResponseData.getContent()).get("data"),"20200509");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (String) JsonUtils.json2map(hxHttpClientResponseData.getContent()).get("data");
+    }
+
+
+
+    private void case2(String data) {
+        String url = "http://127.0.0.1:8082/postheaders";
+
+        //定义headers签名类型,headers的value自定义，模拟数据用json-paramaters-haveheaders-post.json数据
+        Map<String,String> headers = new HashMap<>();
+        headers.put("token","123456789%");
+
+        HxHttpClient hxHttpClient = HxHttpClient.getInstance();
+        Map<String,Object> map = new HashMap<>();
+        map.put("data",data);
+        map.put("age","29");
+        hxHttpClient.config(url,"post",map);
+        //这里注意header位置，需要位于config方法之后
+        hxHttpClient.header(headers);
+        HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
+        //断言http返回的状态码是否为200, getcode是int类型，需要强转下string类型
+        Assert.assertEquals(String.valueOf(hxHttpClientResponseData.getCode()),"300");
+        System.out.println(hxHttpClientResponseData);
+        //输出做下json格式打印
+        System.out.println(JsonUtils.jsonFormatter(hxHttpClientResponseData.getContent()));
+
+    }
+
 
 }
