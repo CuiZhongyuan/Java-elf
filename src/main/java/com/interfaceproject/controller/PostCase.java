@@ -18,14 +18,14 @@ import java.util.Map;
  *@author czy
  * @date 2020年05月09日
  */
-//@RequestMapping("test")
-//@Api(value = "test接口",tags = {"接口测试用例"})
+
 @RestController
+@Api(value = "api",tags = "接口测试用例")
 public class PostCase {
 
 //   其中@PostMapping注解=@RequestMapping(value = "/postjson", method = RequestMethod.POST)
 //    @RequestMapping(value = "/postjson", method = RequestMethod.POST)
-//    @ApiOperation(value = "postCase1测试",notes = "测试用例1",httpMethod = "post")
+    @ApiOperation(value =             "用户查询接口")
     @PostMapping("/postjson")
     public Map<String, Object> jsonpost(@RequestBody Map<String, Object> reqMap) throws Exception {
         String name = (String) reqMap.get("name");
@@ -35,15 +35,15 @@ public class PostCase {
         }
 
         //这里用两种方式返回。1、Javabean对象 2、Map对象
-        User user = new User(12,"121","121","121");
-        //这里需要把javabean对象转成字符串然后在转成map对象
-        return JsonUtils.json2map(JsonUtils.obj2json(user));
+//        User user = new User(12,"121","121","121");
+//        //这里需要把javabean对象转成字符串然后在转成map对象
+//        return JsonUtils.json2map(JsonUtils.obj2json(user));
 
         //Map对象返回响应
-//        Map<String, Object> resMap = new HashMap<>();
-//        resMap.put("error", "1000");
-//        resMap.put("mages", "success");
-//        resMap.put("data","20200509");
-//        return resMap;
+        Map<String, Object> resMap = new HashMap<>();
+        resMap.put("error", "1000");
+        resMap.put("mages", "success");
+        resMap.put("data","20200509");
+        return resMap;
     }
 }

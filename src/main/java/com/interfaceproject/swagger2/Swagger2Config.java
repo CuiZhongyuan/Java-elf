@@ -13,10 +13,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /***
  * @ClassName: swagger2注册类
- * @Description: czy
- * @Auther: ywang
+ * @Description: swagger2配置文件
+ * @Auther: czy
  * @Date: 15:03 2020/05/09
  * @version : V1.0.0
+ * swagger2 登录地址：http://ip:port/swagger-ui.html
  */
 @Configuration
 @EnableSwagger2
@@ -27,8 +28,8 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                //为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.example.web"))
+                //特别注意这里是项目的控制层路径，如果不对会出现：No operations defined in spec!
+                .apis(RequestHandlerSelectors.basePackage("com.interfaceproject.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
