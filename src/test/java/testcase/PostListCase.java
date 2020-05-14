@@ -15,8 +15,6 @@ import java.util.Map;
 
 public class PostListCase {
 
-//    String url = "http://127.0.0.1:8081/postjson";
-
 
     /**
      * POST---head里无签名认证用例
@@ -26,7 +24,7 @@ public class PostListCase {
     @Test
     public void  postCase1(){
 
-        String url = "http://127.0.0.1:8090/postjson";
+        String url = "http://127.0.0.1:8090/jsonpost";
 
         //传入参数
         Map<String,Object> map = new HashMap<>();
@@ -61,17 +59,17 @@ public class PostListCase {
      */
     @Test
     public void postCase2(){
-        String url = "http://127.0.0.1:8082/postheaders";
+        String url = "http://127.0.0.1:8090/headerpost";
 
         //定义headers签名类型,headers的value自定义，模拟数据用json-paramaters-haveheaders-post.json数据
         Map<String,String> headers = new HashMap<>();
-        headers.put("token","123456789%");
+        headers.put("header","123456789%");
 
         HxHttpClient hxHttpClient = HxHttpClient.getInstance();
         Map<String,Object> map = new HashMap<>();
         map.put("data","20200509");
         map.put("age","29");
-        hxHttpClient.config(url,"post",map);
+        hxHttpClient.config(url,"POST",map);
         //这里注意header位置，需要位于config方法之后
         hxHttpClient.header(headers);
         HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
@@ -100,7 +98,7 @@ public class PostListCase {
 
     private String case1() throws Exception {
 
-        String url = "http://127.0.0.1:8090/postjson";
+        String url = "http://127.0.0.1:8090/jsonpost";
 
         //传入参数
         Map<String,Object> map = new HashMap<>();
@@ -129,19 +127,18 @@ public class PostListCase {
     }
 
 
-
     private void case2(String data) throws Exception {
-        String url = "http://127.0.0.1:8082/postheaders";
+        String url = "http://127.0.0.1:8090/headerpost";
 
         //定义headers签名类型,headers的value自定义，模拟数据用json-paramaters-haveheaders-post.json数据
         Map<String,String> headers = new HashMap<>();
-        headers.put("token","123456789%");
+        headers.put("header","123456789%");
 
         HxHttpClient hxHttpClient = HxHttpClient.getInstance();
         Map<String,Object> map = new HashMap<>();
         map.put("data",data);
         map.put("age","29");
-        hxHttpClient.config(url,"post",map);
+        hxHttpClient.config(url,"POST",map);
         //这里注意header位置，需要位于config方法之后
         hxHttpClient.header(headers);
         HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
@@ -151,11 +148,12 @@ public class PostListCase {
 
         //断言http返回的状态码是否为200, getcode是int类型，需要强转下string类型
         Assert.assertEquals(String.valueOf(hxHttpClientResponseData.getCode()),"200");
-        //断言响应参数是否与预期结果一致,由于断言name是data的Json对象key，这里需要把json对象强转为Map对象供后dataMap.get("name")获取name值
-        Map<String, Object> dataMap = (Map<String, Object>) JsonUtils.json2map(hxHttpClientResponseData.getContent()).get("data");
+        //断言响应参数是否与预期结果一致,由于断言name是data的Json对象key，这里需要把json对象强转为Map对象供后dataMap.get("content")获取name值
+        Map<String, Object> dataMap = (Map<String, Object>) JsonUtils.json2map(hxHttpClientResponseData.getContent()).get("content");
         try {
-            Assert.assertEquals(dataMap.get("name"),"北京");
-            System.out.println("name:"+dataMap.get("name"));
+//            这里断言一个错误的返回数据判断，正确为“北京六道口”，错误写为“北京”
+            Assert.assertEquals(dataMap.get("address"),"北京");
+            System.out.println("address:"+dataMap.get("address"));
         } catch (Exception e) {
             e.printStackTrace();
         }

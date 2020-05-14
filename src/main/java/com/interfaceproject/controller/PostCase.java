@@ -2,12 +2,18 @@ package com.interfaceproject.controller;
 
 import com.google.inject.internal.ErrorsException;
 import com.interfaceproject.entry.User;
+import com.interfaceproject.utils.HxHttpClient;
+import com.interfaceproject.utils.HxHttpClientResponseData;
 import com.interfaceproject.utils.JsonUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.http.Header;
+import org.apache.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,11 +29,14 @@ import java.util.Map;
 @Api(value = "api",tags = "接口测试用例")
 public class PostCase {
 
+
 //   其中@PostMapping注解=@RequestMapping(value = "/postjson", method = RequestMethod.POST)
 //    @RequestMapping(value = "/postjson", method = RequestMethod.POST)
-    @ApiOperation(value =             "用户查询接口")
-    @PostMapping("/postjson")
-    public Map<String, Object> jsonpost(@RequestBody Map<String, Object> reqMap) throws Exception {
+
+//    post 请求无 header 参数的请求示例
+    @ApiOperation(value ="case1--无header的post用例")
+    @PostMapping("/jsonpost")
+    public Map<String, Object> postCase1(@RequestBody Map<String, Object> reqMap) throws Exception {
         String name = (String) reqMap.get("name");
         String age = (String) reqMap.get("age");
         if ((null == name || "".equals(name)) || (null == age || "".equals(age))) {
@@ -46,4 +55,36 @@ public class PostCase {
         resMap.put("data","20200509");
         return resMap;
     }
+
+
+    // post请求带header参数的示例，header中包含：token ，jwt,session等
+    @ApiOperation(value = "case2--有header的post用例")
+//    @RequestMapping(value = "/headerpost",method = RequestMethod.POST)
+    @PostMapping("/headerpost")
+    public Map<String,Object> postCase2(HttpServletRequest request, @RequestBody Map<String, Object> reqMap) throws Exception {
+        String data = (String)reqMap.get("data");
+        String age = (String) reqMap.get("age");
+        if ((null == data || "".equals(data)) || (null == age || "".equals(age))) {
+            throw new Exception("参数异常");
+        }
+
+        String token = request.getHeader("header");
+        System.out.println("token:"+token);
+        String num = "123456789%";
+
+        //Map对象返回响应
+        Map<String, Object> resMap = new HashMap<>();
+        resMap.put("address","北京六道口");
+        Map<String,Object> contMap = new HashMap<>();
+        contMap.put("error", "1000");
+        contMap.put("mages", "success");
+        contMap.put("data","20200509");
+        contMap.put("content",resMap);
+
+        if(  null == token || "".equals(token) || !token.equals(num)){
+            throw new Exception("token鉴权失败");
+        }
+        return contMap;
+    }
+
 }

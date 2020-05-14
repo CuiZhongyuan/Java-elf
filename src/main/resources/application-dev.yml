@@ -1,0 +1,21 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+logging:
+  config: classpath:log4j2.xml
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/interface-test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
+    username: root
+    password: '000000'
+    driverClassName: com.mysql.cj.jdbc.Driver
+    platform: mysql
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#定时任务配置
+'index.job': '0 0 0 * * ?'
+'thirdOrderCancel.job': '0 0/60 * * * ?'
+'autoRefund.job': '0 0/30 * * * ?'
+'deleteCosUploadImg.job': '0 0 * * * ?'

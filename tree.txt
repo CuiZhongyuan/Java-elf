@@ -1,0 +1,176 @@
+卷 工作 的文件夹 PATH 列表
+卷序列号为 F4BF-1976
+F:.
+│  .gitignore
+│  docker-auto.sh
+│  Dockerfile
+│  HttpClientPackage.iml
+│  pom.xml
+│  README.md
+│  tree.txt
+│  
+├─.idea
+│      .gitignore
+│      compiler.xml
+│      encodings.xml
+│      HttpClientPackage.iml
+│      jarRepositories.xml
+│      misc.xml
+│      uiDesigner.xml
+│      vcs.xml
+│      workspace.xml
+│      
+├─src
+│  ├─main
+│  │  ├─java
+│  │  │  └─com
+│  │  │      └─interfaceproject
+│  │  │          │  Application.java
+│  │  │          │  
+│  │  │          ├─controller
+│  │  │          │      ParaPost.java
+│  │  │          │      PostCase.java
+│  │  │          │      
+│  │  │          ├─entry
+│  │  │          │      User.java
+│  │  │          │      
+│  │  │          ├─httpclient
+│  │  │          │      HttpclinetCaseOld.java
+│  │  │          │      PostJsonGeneralCase.java
+│  │  │          │      
+│  │  │          ├─listener
+│  │  │          │      ExtentTestNGIReporterListener.java
+│  │  │          │      
+│  │  │          ├─swagger2
+│  │  │          │      Swagger2Config.java
+│  │  │          │      
+│  │  │          ├─testng
+│  │  │          │      TestNgOrdrTest.java
+│  │  │          │      
+│  │  │          └─utils
+│  │  │                  HxHttpClient.java
+│  │  │                  HxHttpClientPool.java
+│  │  │                  HxHttpClientResponseData.java
+│  │  │                  HxHttpClientResponseErrorData.java
+│  │  │                  HxHttpClientResponseSuccessData.java
+│  │  │                  JsonUtils.java
+│  │  │                  
+│  │  └─resources
+│  │      │  application.properties
+│  │      │  log4j2.xml
+│  │      │  testNG.xml
+│  │      │  
+│  │      ├─sample
+│  │      │      have-paramaters-get.json
+│  │      │      have-paramaters-post-json.json
+│  │      │      have-paramaters-post.json
+│  │      │      json-paramaters-havecookies-post-2.json
+│  │      │      json-paramaters-havecookies-post.json
+│  │      │      json-paramaters-haveheaders-post.json
+│  │      │      moco-runner-0.11.0-standalone.jar
+│  │      │      no-paramaters-get-302.json
+│  │      │      no-paramaters-get-responsehavecookies.json
+│  │      │      no-paramaters-get1.json
+│  │      │      no-paramaters-get2.json
+│  │      │      no-paramaters-post.json
+│  │      │      noparamaters-havecookies-get.json
+│  │      │      
+│  │      └─static
+│  │              test.jpg
+│  │              
+│  └─test
+│      └─java
+│          └─testcase
+│                  PostListCase.java
+│                  
+├─target
+│  │  test-1.0-SNAPSHOT.jar
+│  │  test-1.0-SNAPSHOT.jar.original
+│  │  
+│  ├─classes
+│  │  │  application.properties
+│  │  │  log4j2.xml
+│  │  │  testNG.xml
+│  │  │  
+│  │  ├─com
+│  │  │  └─interfaceproject
+│  │  │      │  Application.class
+│  │  │      │  
+│  │  │      ├─controller
+│  │  │      │      ParaPost.class
+│  │  │      │      PostCase.class
+│  │  │      │      
+│  │  │      ├─entry
+│  │  │      │      User.class
+│  │  │      │      
+│  │  │      ├─httpclient
+│  │  │      │      HttpclinetCaseOld.class
+│  │  │      │      PostJsonGeneralCase.class
+│  │  │      │      
+│  │  │      ├─listener
+│  │  │      │      ExtentTestNGIReporterListener$1.class
+│  │  │      │      ExtentTestNGIReporterListener.class
+│  │  │      │      
+│  │  │      ├─swagger2
+│  │  │      │      Swagger2Config.class
+│  │  │      │      
+│  │  │      ├─testng
+│  │  │      │      TestNgOrdrTest.class
+│  │  │      │      
+│  │  │      └─utils
+│  │  │              HxHttpClient$HttpWithEntity.class
+│  │  │              HxHttpClient.class
+│  │  │              HxHttpClientPool$1.class
+│  │  │              HxHttpClientPool.class
+│  │  │              HxHttpClientResponseData.class
+│  │  │              HxHttpClientResponseErrorData.class
+│  │  │              HxHttpClientResponseSuccessData.class
+│  │  │              JsonUtils.class
+│  │  │              
+│  │  ├─META-INF
+│  │  │      HttpClientPackage.kotlin_module
+│  │  │      
+│  │  ├─sample
+│  │  │      have-paramaters-get.json
+│  │  │      have-paramaters-post-json.json
+│  │  │      have-paramaters-post.json
+│  │  │      json-paramaters-havecookies-post-2.json
+│  │  │      json-paramaters-havecookies-post.json
+│  │  │      json-paramaters-haveheaders-post.json
+│  │  │      moco-runner-0.11.0-standalone.jar
+│  │  │      no-paramaters-get-302.json
+│  │  │      no-paramaters-get-responsehavecookies.json
+│  │  │      no-paramaters-get1.json
+│  │  │      no-paramaters-get2.json
+│  │  │      no-paramaters-post.json
+│  │  │      noparamaters-havecookies-get.json
+│  │  │      
+│  │  └─static
+│  │          test.jpg
+│  │          
+│  ├─generated-sources
+│  │  └─annotations
+│  ├─generated-test-sources
+│  │  └─test-annotations
+│  ├─maven-archiver
+│  │      pom.properties
+│  │      
+│  ├─maven-status
+│  │  └─maven-compiler-plugin
+│  │      ├─compile
+│  │      │  └─default-compile
+│  │      │          createdFiles.lst
+│  │      │          inputFiles.lst
+│  │      │          
+│  │      └─testCompile
+│  │          └─default-testCompile
+│  │                  createdFiles.lst
+│  │                  inputFiles.lst
+│  │                  
+│  └─test-classes
+│      └─testcase
+│              PostListCase.class
+│              
+└─testoutput
+        index.html
+        
