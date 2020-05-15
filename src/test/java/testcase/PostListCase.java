@@ -93,7 +93,6 @@ public class PostListCase {
         Thread.sleep(1000);
         // todo
         case2(data);
-
     }
 
     private String case1() throws Exception {
