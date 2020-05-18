@@ -31,6 +31,7 @@ public class HxHttpClient {
 
     public static HxHttpClient getInstance() {
         if (instance == null) {
+            //添加同步锁，防止并发
             synchronized (HxHttpClient.class) {
                 if (instance == null) {
                     instance = new HxHttpClient();

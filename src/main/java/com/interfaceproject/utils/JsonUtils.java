@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,6 +19,7 @@ import java.util.Map;
  *
  * @author lgl
  */
+@SuppressWarnings("deprecation")
 public class JsonUtils {
     private final static ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
@@ -188,5 +193,16 @@ public class JsonUtils {
      */
     public static <T> T obj2pojo(Object obj, Class<T> clazz) {
         return OBJECT_MAPPER.convertValue(obj, clazz);
+    }
+
+    /**
+     *序列化：将Java对象转换成JSON字符串
+     * */
+    public static String jsonFormatter(String uglyJSONString){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(uglyJSONString);
+        String prettyJsonString = gson.toJson(je);
+        return prettyJsonString;
     }
 }

@@ -3,7 +3,7 @@
 <suite name="testng-project">
     <test name="testng-project">
         <classes>
-            <class name="com.interfaceproject.httpclient.PostJsonGeneralCase" >
+            <class name="testcase.PostListCase" >
             </class>
         </classes>
     </test>
