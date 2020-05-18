@@ -4,6 +4,8 @@ package testcase;
 import com.interfaceproject.utils.HxHttpClient;
 import com.interfaceproject.utils.HxHttpClientResponseData;
 import com.interfaceproject.utils.JsonUtils;
+import com.interfaceproject.utils.RestTemplateUtils;
+import org.springframework.http.ResponseEntity;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -157,6 +159,42 @@ public class PostListCase {
             e.printStackTrace();
         }
 
+    }
+
+
+    /**
+     * 新的RestTemplateUtils工具类替代旧的HxHttpClient示例
+     * POST---无header参数请求
+     *@author czy
+     * @date 2020年05月18日
+     */
+    @Test
+    public void  postCase4(){
+
+        String url = "http://127.0.0.1:8090/jsonpost";
+
+        //传入参数
+        Map<String,Object> map = new HashMap<>();
+        map.put("name","czy");
+        map.put("age","29");
+//        旧hxHttpClient方法
+//        //创建HxHttpClient对象
+//        HxHttpClient hxHttpClient =  HxHttpClient.getInstance();
+//        //传入请求的url、参数
+//        hxHttpClient.config(url,"POST",map);
+//        // 接收响应参数
+//        HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
+//        //接收业务统一处理参数
+//        String responseContent = hxHttpClientResponseData.getContent();
+
+//      使用新的RestTemplateUtils类替代旧的hxHttpClient方法
+        ResponseEntity<Object> responseEntity = RestTemplateUtils.post(url,map,Object.class);
+        // 强转Map,responseEntity.getBody()是Object对象需要强转下Map对象来取参数
+        Map<String, Object> resmap = (Map<String, Object>) responseEntity.getBody();
+        System.out.println("map:"+ resmap);
+        String data = (String) resmap.get("data");
+        Assert.assertEquals(data,"2020050");
+        System.out.println("data:"+data);
     }
 
 
