@@ -8,7 +8,7 @@
 - testng
 - Swagger2
 - extentreports
-- httpclient（这里抽取了一些方法非常好用）
+- httpclient（这里抽取了一些方法比较好用）
 - log4j2
 
 ##### 更新日志记录
