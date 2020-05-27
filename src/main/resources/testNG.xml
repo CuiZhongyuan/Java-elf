@@ -5,6 +5,7 @@
         <classes>
             <class name="testcase.PostListCase" >
             </class>
+            <class name="testcase.YyyCancelCase"></class>
         </classes>
     </test>
     <listeners>
