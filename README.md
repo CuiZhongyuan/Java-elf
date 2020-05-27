@@ -40,7 +40,7 @@
 根据入参参数设置并发量，测试结果如下：
 ![](https://upload-images.jianshu.io/upload_images/16753854-40827876db033744.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-好了这里就结束了，简单的写了两个示例，在实际的业务中还需根据自己的接口文档去设计测试用例。
+实际的业务中还需根据自己的接口文档去设计测试用例。
 
 
 
