@@ -2,7 +2,7 @@ package com.interfaceproject.testng;
 
 import org.testng.annotations.*;
 
-public class TestNgOrdrTest {
+public class TestNgOrderTest {
 
     @BeforeSuite
     public void beforeSuite(){
