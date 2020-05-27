@@ -17,7 +17,7 @@ import java.util.*;
 
 public class ExtentTestNGIReporterListener implements IReporter {
     //生成的路径以及文件名
-    private static final String OUTPUT_FOLDER = "testoutput/";
+    private static final String OUTPUT_FOLDER = "src/main/resources/static/";
     private static final String FILE_NAME = "index.html";
 
     private ExtentReports extent;
