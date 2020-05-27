@@ -18,13 +18,12 @@
              2.增加定时任务执行用例
 
 ###### 项目结构
-![](https://upload-images.jianshu.io/upload_images/16753854-f04c184aa58cf65f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![](https://upload-images.jianshu.io/upload_images/16753854-e74cd1f0e3ef9b56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ###### 实战示例
 - 通过Swagger2调取controller层示例
 ![](https://upload-images.jianshu.io/upload_images/16753854-e239c05f3564353b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-  ![](https://upload-images.jianshu.io/upload_images/16753854-c3e270a0b7dcb0ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ ![](https://upload-images.jianshu.io/upload_images/16753854-c3e270a0b7dcb0ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - 请求示例
 ![](https://upload-images.jianshu.io/upload_images/16753854-4432d0d4eb1bf723.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
