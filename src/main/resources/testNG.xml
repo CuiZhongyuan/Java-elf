@@ -3,9 +3,9 @@
 <suite name="testng-project">
     <test name="testng-project">
         <classes>
-            <class name="testcase.PostListCase" >
+            <class name="com.interfaceproject.testng.PostListCase" >
             </class>
-            <class name="testcase.YyyCancelCase"></class>
+            <class name="com.interfaceproject.testng.YyyCancelCase"></class>
         </classes>
     </test>
     <listeners>
