@@ -90,7 +90,7 @@ public class YyyCancelCase {
         map.put("content", mapc);
 
 
-        String url = "http://tticket.ybsjyyn.com/saas/api/verification/check";
+        String url = "http://xxx/api/verification/check";
 //        HxHttpClient hxHttpClient = HxHttpClient.getInstance();
 //        hxHttpClient.config(url,"POST",mapc);
 //        HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
