@@ -14,7 +14,8 @@
 ##### 更新日志记录
 - 2020.04.26 删除公司业务代码，精简示例代码，初始化项目
 - 2020.04.28 添加docker-auto.sh脚本和Dockerfile留存
-- 2020.05.27 修改extentreports源码，由线上引用样式改为项目本身离线样式
+- 2020.05.27 1.修改extentreports源码，由线上引用样式改为项目本身离线样式
+             2.增加定时任务执行用例
 
 ###### 项目结构
 ![](https://upload-images.jianshu.io/upload_images/16753854-f04c184aa58cf65f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
