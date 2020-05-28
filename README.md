@@ -1,5 +1,15 @@
 ### 前言
 Java-elf是一个基于java语言的轻巧灵活接口测试框架，目前没有UI界面只能通过代码形式实现业务接口测试
+- 特别注意：
+pom文件
+```
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-java</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+```
+的jar包引用，是通过这里[修改extentreports源码路径](https://github.com/rootczy/extentreports)
 ### 使用技术栈
 
 - Spring Boot 
