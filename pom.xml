@@ -53,6 +53,7 @@
             <artifactId>extentreports</artifactId>
             <version>2.41.1</version>
         </dependency>
+        <!--这里需要引用extentreports修改后的jar包，引入流程见博客<https://www.jianshu.com/p/5e87d078ceb2>-->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports-java</artifactId>
@@ -134,7 +135,28 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
 
-
+        <!--引入springboot热启动-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.ws</groupId>
+            <artifactId>spring-ws-core</artifactId>
+            <version>3.0.0.RC1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.12</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -142,6 +164,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
     </build>
