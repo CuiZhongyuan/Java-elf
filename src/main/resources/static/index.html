@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 28, 2020 11:21:00 AM</span>
+                    <span class='label suite-start-time blue darken-3'>May 29, 2020 04:38:00 PM</span>
 				</a>
 			</li>
 			<li>
@@ -75,6 +75,7 @@
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -125,10 +126,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='20%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='14.286%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='80%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='42.857%'>3</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='42.857%'>3</span> others
 				</div>
 			</div>
 		</div>
@@ -140,10 +141,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='20%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='14.286%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='80%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='42.857%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='42.857%'>3</span> others
 				</div>
 			</div>
 		</div>
@@ -158,98 +159,16 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='51'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>postCase1</span>
-						<span class='test-time'>May 28, 2020 11:21:00 AM</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label end-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+4ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>11:21:02 AM</td>
-					<td class='step-details'><pre>java.lang.AssertionError: expected [1000] but found [null]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.failNotEquals(Assert.java:969)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:563)
-	at com.interfaceproject.testng.PostListCase.postCase1(PostListCase.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-	at org.testng.TestNG.runSuites(TestNG.java:1039)
-	at org.testng.TestNG.run(TestNG.java:1007)
-	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
-	at java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='52'>
-					<div class='test-heading'>
-						<span class='test-name'>postCase3</span>
-						<span class='test-time'>May 28, 2020 11:21:00 AM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label end-time'>May 28, 2020 11:21:00 AM</span>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
 </div>
 	<div class='test-steps'>
@@ -264,23 +183,22 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>11:21:02 AM</td>
-					<td class='step-details'><pre>java.lang.AssertionError: expected [20200509] but found [null]
+					<td class='timestamp'>4:38:00 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [1000] but found [null]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:563)
-	at com.interfaceproject.testng.PostListCase.case1(PostListCase.java:123)
-	at com.interfaceproject.testng.PostListCase.postCase3(PostListCase.java:94)
+	at com.interfaceproject.testngservice.PostListCase.postCase1(PostListCase.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -298,6 +216,7 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -323,16 +242,100 @@
 				</li>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='53'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>postCase4</span>
-						<span class='test-time'>May 28, 2020 11:21:00 AM</span>
+						<span class='test-name'>postCase3</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label end-time'>May 28, 2020 11:21:00 AM</span>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>4:38:00 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [20200509] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:563)
+	at com.interfaceproject.testngservice.PostListCase.case1(PostListCase.java:123)
+	at com.interfaceproject.testngservice.PostListCase.postCase3(PostListCase.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
+	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>postCase4</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+4ms</span>
 </div>
 	<div class='test-steps'>
@@ -347,7 +350,7 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>11:21:02 AM</td>
+					<td class='timestamp'>4:38:00 PM</td>
 					<td class='step-details'><pre>java.lang.AssertionError: expected [2020050] but found [null]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
@@ -355,15 +358,15 @@
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:575)
 	at org.testng.Assert.assertEquals(Assert.java:585)
-	at com.interfaceproject.testng.PostListCase.postCase4(PostListCase.java:196)
+	at com.interfaceproject.testngservice.PostListCase.postCase4(PostListCase.java:196)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -381,6 +384,7 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -406,17 +410,17 @@
 				</li>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='54'>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='4'>
 					<div class='test-heading'>
-						<span class='test-name'>testrun</span>
-						<span class='test-time'>May 28, 2020 11:21:00 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>postCase1</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label end-time'>May 28, 2020 11:21:02 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+552ms</span>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+426ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -428,17 +432,16 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>11:21:02 AM</td>
-					<td class='step-details'><pre>org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://xxx/api/verification/check": xxx; nested exception is java.net.UnknownHostException: xxx
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:751)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:677)
-	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:452)
-	at com.interfaceproject.utils.RestTemplateUtils.post(RestTemplateUtils.java:149)
-	at com.interfaceproject.testng.YyyCancelCase.ty(YyyCancelCase.java:100)
-	at com.interfaceproject.testng.YyyCancelCase.readFile(YyyCancelCase.java:31)
-	at com.interfaceproject.testng.YyyCancelCase.testrun(YyyCancelCase.java:17)
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>4:38:00 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [1000] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:563)
+	at com.interfaceproject.testngservice.PostListCase.postCase1(PostListCase.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -464,6 +467,7 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -480,29 +484,6 @@
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.UnknownHostException: xxx
-	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
-	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
-	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
-	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
-	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
-	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
-	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:742)
-	... 47 more
 </pre></td>
 				</tr>
 			</tbody>
@@ -512,17 +493,185 @@ Caused by: java.net.UnknownHostException: xxx
 				</li>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='55'>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>postCase3</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>4:38:00 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [20200509] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:563)
+	at com.interfaceproject.testngservice.PostListCase.case1(PostListCase.java:123)
+	at com.interfaceproject.testngservice.PostListCase.postCase3(PostListCase.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
+	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>postCase4</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+53ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>4:38:00 PM</td>
+					<td class='step-details'><pre>java.lang.AssertionError: expected [2020050] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at com.interfaceproject.testngservice.PostListCase.postCase4(PostListCase.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
+	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>postCase2</span>
-						<span class='test-time'>May 28, 2020 11:21:00 AM</span>
+						<span class='test-time'>May 29, 2020 04:38:00 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label end-time'>May 28, 2020 11:21:00 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+2ms</span>
+	<span class='label start-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label end-time'>May 29, 2020 04:38:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+12ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -536,7 +685,7 @@ Caused by: java.net.UnknownHostException: xxx
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:21:02 AM</td>
+					<td class='timestamp'>4:38:00 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -598,7 +747,7 @@ Caused by: java.net.UnknownHostException: xxx
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
                                 <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>6</span></span>
                             </div>
                             <div class='exception-content hide'>
                                 <div class='exception-tests'>
@@ -612,23 +761,23 @@ Caused by: java.net.UnknownHostException: xxx
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>May 28, 2020 11:21:00 AM</td>
-                                                        <td class='linked' test-id='51'>postCase1</td>
+                                                        <td>May 29, 2020 04:38:00 PM</td>
+                                                        <td class='linked' test-id='1'>postCase1</td>
                                                         <td><pre><pre>java.lang.AssertionError: expected [1000] but found [null]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:563)
-	at com.interfaceproject.testng.PostListCase.postCase1(PostListCase.java:50)
+	at com.interfaceproject.testngservice.PostListCase.postCase1(PostListCase.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -646,6 +795,7 @@ Caused by: java.net.UnknownHostException: xxx
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -665,24 +815,24 @@ Caused by: java.net.UnknownHostException: xxx
 </pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>May 28, 2020 11:21:00 AM</td>
-                                                        <td class='linked' test-id='52'>postCase3</td>
+                                                        <td>May 29, 2020 04:38:00 PM</td>
+                                                        <td class='linked' test-id='2'>postCase3</td>
                                                         <td><pre><pre>java.lang.AssertionError: expected [20200509] but found [null]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:563)
-	at com.interfaceproject.testng.PostListCase.case1(PostListCase.java:123)
-	at com.interfaceproject.testng.PostListCase.postCase3(PostListCase.java:94)
+	at com.interfaceproject.testngservice.PostListCase.case1(PostListCase.java:123)
+	at com.interfaceproject.testngservice.PostListCase.postCase3(PostListCase.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -700,6 +850,7 @@ Caused by: java.net.UnknownHostException: xxx
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -719,8 +870,8 @@ Caused by: java.net.UnknownHostException: xxx
 </pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>May 28, 2020 11:21:00 AM</td>
-                                                        <td class='linked' test-id='53'>postCase4</td>
+                                                        <td>May 29, 2020 04:38:00 PM</td>
+                                                        <td class='linked' test-id='3'>postCase4</td>
                                                         <td><pre><pre>java.lang.AssertionError: expected [2020050] but found [null]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
@@ -728,15 +879,15 @@ Caused by: java.net.UnknownHostException: xxx
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:575)
 	at org.testng.Assert.assertEquals(Assert.java:585)
-	at com.interfaceproject.testng.PostListCase.postCase4(PostListCase.java:196)
+	at com.interfaceproject.testngservice.PostListCase.postCase4(PostListCase.java:196)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -754,6 +905,7 @@ Caused by: java.net.UnknownHostException: xxx
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -772,38 +924,16 @@ Caused by: java.net.UnknownHostException: xxx
 	at java.lang.Thread.run(Thread.java:748)
 </pre></pre></td>
                                                     </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>org.springframework.web.client.ResourceAccessException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
                                                     <tr>
-                                                        <td>May 28, 2020 11:21:00 AM</td>
-                                                        <td class='linked' test-id='54'>testrun</td>
-                                                        <td><pre><pre>org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://xxx/api/verification/check": xxx; nested exception is java.net.UnknownHostException: xxx
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:751)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:677)
-	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:452)
-	at com.interfaceproject.utils.RestTemplateUtils.post(RestTemplateUtils.java:149)
-	at com.interfaceproject.testng.YyyCancelCase.ty(YyyCancelCase.java:100)
-	at com.interfaceproject.testng.YyyCancelCase.readFile(YyyCancelCase.java:31)
-	at com.interfaceproject.testng.YyyCancelCase.testrun(YyyCancelCase.java:17)
+                                                        <td>May 29, 2020 04:38:00 PM</td>
+                                                        <td class='linked' test-id='4'>postCase1</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [1000] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:563)
+	at com.interfaceproject.testngservice.PostListCase.postCase1(PostListCase.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -829,6 +959,7 @@ Caused by: java.net.UnknownHostException: xxx
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
 	at org.testng.TestNG.runSuites(TestNG.java:1039)
 	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
 	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -845,29 +976,116 @@ Caused by: java.net.UnknownHostException: xxx
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.UnknownHostException: xxx
-	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
-	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
-	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
-	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
-	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
-	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
-	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:742)
-	... 47 more
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>May 29, 2020 04:38:00 PM</td>
+                                                        <td class='linked' test-id='5'>postCase3</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [20200509] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:563)
+	at com.interfaceproject.testngservice.PostListCase.case1(PostListCase.java:123)
+	at com.interfaceproject.testngservice.PostListCase.postCase3(PostListCase.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
+	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>May 29, 2020 04:38:00 PM</td>
+                                                        <td class='linked' test-id='6'>postCase4</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [2020050] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at com.interfaceproject.testngservice.PostListCase.postCase4(PostListCase.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.interfaceproject.utils.BaseTestngInit.baseTestngInitCode(BaseTestngInit.java:34)
+	at com.interfaceproject.listener.TimeTask.runTest(TimeTask.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -894,31 +1112,31 @@ Caused by: java.net.UnknownHostException: xxx
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 28, 2020 11:21:00 AM</div>
+					<div class='panel-lead'>May 29, 2020 04:38:00 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 28, 2020 11:21:02 AM</div>
+			 		<div class='panel-lead'>May 29, 2020 04:38:00 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 2s+597ms</div>
+					<div class='panel-lead'>0h 0m 0s+723ms</div>
 				</div>
 			</div>
 		</div>
@@ -932,21 +1150,21 @@ Caused by: java.net.UnknownHostException: xxx
 		<script>
 			var statusGroup = {
 				passParent: 1,
-				failParent: 4,
+				failParent: 3,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 4,
+				skipParent: 3,
+				exceptionsParent: 6,
 				
 				passChild: 1,
-				failChild: 4,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 3,
 				infoChild: 0,
-				exceptionsChild: 4,
+				exceptionsChild: 6,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

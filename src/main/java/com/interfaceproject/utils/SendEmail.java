@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * 邮件发送测试报告.
  * 
- * @author jw
+ * @author yss
  * 
  */
 public class SendEmail {  
@@ -54,9 +54,9 @@ public class SendEmail {
      * @param smtpHost 
      *            邮件服务器地址 
      * @param sendUserName 
-     *            发件邮件地址 
+     *            发件邮件账号
      * @param sendUserPass 
-     *            发件邮箱密码 
+     *            邮箱的SMTP生成密码
      * @param to 
      *            收件人，多个邮箱地址以半角逗号分隔 
      * @param cc 

@@ -16,16 +16,16 @@ spring:
 
   mail:
     host: "smtp.qq.com"
-    username: "自己邮箱账号"
-    password: "SMTP获取的密码"
+    username: "xxx"
+    password: "xxx"
 test:
   mail:
-    send: 收件人邮箱
-    cc: 抄送人邮箱
+    send:
+    cc:
 
 #定时任务配置
 #'index.job': '0 0 0 * * ?'
 #'thirdOrderCancel.job': '0 0/60 * * * ?'
-'autoRefund.job': '0 0/1  * * * ?'
+'autoRefund.job': '0 0/60  * * * ?'
 #'deleteCosUploadImg.job': '0 0 * * * ?'
 

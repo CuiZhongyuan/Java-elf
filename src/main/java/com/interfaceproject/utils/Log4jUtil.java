@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
  */
 public class Log4jUtil {
 
+
     public static void info(Object str_info) {
         StackTraceElement stack[] = (new Throwable()).getStackTrace();
         Logger logger = Logger.getLogger(stack[1].getClassName());

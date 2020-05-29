@@ -17,8 +17,11 @@ Java-elf是一个基于java语言的轻巧灵活接口测试框架，目前没�
              2.增加定时任务执行用例
 - 2020.05.28 1.增加测试报告邮件发送功能
              2.自动生成测试报告集成到项目中可以通过项目直接访问
+- 2020.05.29 1.优化testng测试用例由xml文件改为BaseTestngInit工具类引入
+             
 ###### 项目结构
-![](https://upload-images.jianshu.io/upload_images/16753854-ecfe910551471526.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/16753854-0e897d6647a42a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ###### 实战示例
 - 通过Swagger2调取controller层示例
 ![](https://upload-images.jianshu.io/upload_images/16753854-e239c05f3564353b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

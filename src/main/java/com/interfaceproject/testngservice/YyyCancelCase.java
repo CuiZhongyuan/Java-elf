@@ -1,4 +1,4 @@
-package com.interfaceproject.testng;
+package com.interfaceproject.testngservice;
 
 import com.interfaceproject.utils.JsonUtils;
 import com.interfaceproject.utils.RestTemplateUtils;
@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class YyyCancelCase {
+
 
     @Test
     public void testrun(){
@@ -64,13 +65,22 @@ public class YyyCancelCase {
 
     //核销接口
     public String ty(String pass){
-        Map<String,Object> map = new HashMap();
-        String time = DateUtils.getTime();
+        Map<String, Object> map = new HashMap<>();
+        String time = DateUtils.getSystime();
         System.out.println(time);
-
         // 西游洞资源id——tengyunGardenId
-//      map.put("resource_id","2c180c36-42c3-48fb-bbbc-12d162996535");
+//        map.put("resource_id","2c180c36-42c3-48fb-bbbc-12d162996535");
         map.put("resource_id", "bf299f31-8ce9-474f-9f6d-367cc1952807");
+        // 大观园资源id——tengyunGardenId
+//        map.put("resource_id", "47d8327c-c1f1-4442-a939-29d5f1613349");
+//        map.put("resource_id", "47d8327c-c1f1-4442-a939-29d5f1613348");
+        // 设备id——tengyunChannelId
+//        map.put("device_id", "603879b7-33d6-4dec-77a3-245b1ca5e616");
+        //1闸机, 2手持机 3小程序  为3时device_id应为null
+        //黑龙潭2
+//        map.put("resource_id","35e6fe2f-1867-4b71-9a5b-e13e945d75db");
+        //黑龙潭1
+//        map.put("resource_id","4d2569ba-2f19-43a1-bc2e-eb38d67f2fc2");
         map.put("source_type", 3);
         map.put("source_id", "18687201681");
         map.put("timestamp", time);
@@ -88,16 +98,9 @@ public class YyyCancelCase {
         mapc.put("direction", 1);
         mapc.put("check_quantity",1);
         map.put("content", mapc);
+        String url = "http://127.0.0.1:8090/api/verification/check";
 
-
-        String url = "http://xxx/api/verification/check";
-//        HxHttpClient hxHttpClient = HxHttpClient.getInstance();
-//        hxHttpClient.config(url,"POST",mapc);
-//        HxHttpClientResponseData hxHttpClientResponseData = hxHttpClient.execute();
-//        String str = JsonUtils.jsonFormatter(hxHttpClientResponseData.getContent());
-//        System.out.println(str);
-
-        ResponseEntity responseEntity = RestTemplateUtils.post(url,mapc,Object.class);
+        ResponseEntity responseEntity = RestTemplateUtils.post(url,map,Object.class);
         String str = JsonUtils.obj2json(responseEntity.getBody());
         return JsonUtils.jsonFormatter(str);
     }

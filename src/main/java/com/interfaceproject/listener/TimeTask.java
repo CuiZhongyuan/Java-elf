@@ -1,16 +1,18 @@
 package com.interfaceproject.listener;
 
+import com.interfaceproject.utils.BaseTestngInit;
 import com.interfaceproject.utils.SendEmail;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.testng.TestNG;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-//通过配置文件执行定时任务运行testng.xml文件
+//配置定时任务执行baseTestngInit.baseTestngInitCode();方法下加载的用例业务
 @Service
 public class TimeTask {
     /**
@@ -42,11 +44,9 @@ public class TimeTask {
     @Scheduled(cron = "${autoRefund.job}")
     public void runTest() throws Exception {
         System.out.println("----------开始执行测试用例----------");
-        TestNG testNG = new TestNG();
-        List<String> suites = new ArrayList<String>();
-        suites.add("src\\main\\resources\\testNG.xml");
-        testNG.setTestSuites(suites);
-        testNG.run();
+        //执行testng加载测试用例
+        BaseTestngInit baseTestngInit = new BaseTestngInit();
+        baseTestngInit.baseTestngInitCode();
         //打包成zip包位置
         String targetPath = "D:\\";
         //项目静态文件路径
