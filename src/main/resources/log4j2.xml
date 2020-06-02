@@ -3,7 +3,7 @@
 <Configuration status="WARN">
     <Properties>
         <!-- 日志文件存放路径 -->
-        <property name="log_home">D:\IdeaProjects\interface-test01\logs\data-log</property>
+        <property name="log_home">D:\HttpClient\logs\data-log</property>
         <!-- 输出日志的格式%highlight{}高亮，%d{HH:mm:ss.SSS}表示输出到毫秒的时间 ;%t输出当前线程名称 ;%-5level输出日志级别，-5表示左对齐并且固定输出5个字符，如果不足在右边补空格;
             %logger{36}和%class{3}是输出类型括号中的数字代表包的层级，一次从最深一层往上； %msg日志文本； %n换行；其他常用的占位符有：
             %F 输出所在的类文件名，如Log4j2Test.java；%L输出行号; %M输出所在方法名; %l输出语句所在的行数, 包括类名、方法名、文件名、行数 -->

@@ -28,3 +28,4 @@ hs_err_pid*
 *.ipr
 target/
 testoutput/
+test-output/

@@ -1,4 +1,4 @@
-package com.interfaceproject.testng;
+package com.interfaceproject.testngservice;
 
 import org.testng.annotations.*;
 
