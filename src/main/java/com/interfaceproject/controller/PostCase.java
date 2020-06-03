@@ -5,6 +5,7 @@ import com.interfaceproject.entry.User;
 import com.interfaceproject.utils.HxHttpClient;
 import com.interfaceproject.utils.HxHttpClientResponseData;
 import com.interfaceproject.utils.JsonUtils;
+import com.interfaceproject.utils.hxutils.CreateIDCardNo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.Header;
@@ -85,6 +86,13 @@ public class PostCase {
             throw new Exception("token鉴权失败");
         }
         return contMap;
+    }
+
+    @ApiOperation(value = "case3--身份证ID自动生成")
+    @GetMapping("/getRandomID")
+    public String getRandomID(){
+        String randomID = CreateIDCardNo.getRandomID();
+        return randomID;
     }
 
 }
