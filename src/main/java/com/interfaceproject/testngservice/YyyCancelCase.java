@@ -1,5 +1,6 @@
 package com.interfaceproject.testngservice;
 
+import com.interfaceproject.utils.BaseTestngInit;
 import com.interfaceproject.utils.JsonUtils;
 import com.interfaceproject.utils.RestTemplateUtils;
 import com.interfaceproject.utils.hxutils.DateUtils;
@@ -16,6 +17,8 @@ public class YyyCancelCase {
     @Test
     public void testrun(){
         readFile();;
+        BaseTestngInit baseTestngInit =  new BaseTestngInit();
+
     }
 
     //读操作读取订单号
@@ -104,12 +107,6 @@ public class YyyCancelCase {
         String str = JsonUtils.obj2json(responseEntity.getBody());
         return JsonUtils.jsonFormatter(str);
     }
-
-
-
-
-
-
 
 
 }
