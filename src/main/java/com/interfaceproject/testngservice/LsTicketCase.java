@@ -24,7 +24,7 @@ public class LsTicketCase {
      */
     private static String secret="e715968f810947149db0db193cf21b93";
 
-    private static String ip="http://219.146.72.74:19993/fsale";
+    private static String ip="http://192.168.1.224:8092/fsale";
 
     @Test
     public void testCase() throws Exception{
