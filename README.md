@@ -89,6 +89,13 @@ pom文件
         </dependency>
 ```
 的jar包引用，是通过这里[修改extentreports源码路径](https://github.com/rootczy/extentreports)
+
+也可以直接下载修改源码后的extentreports依赖包,放到maven的依赖repository.com.aventstack下即可
+```
+链接：https://pan.baidu.com/s/197R_mzx1sr8JZlEGJfVOTA 
+提取码：hosn 
+```
+
 ### 使用技术栈
 
 - Spring Boot 
