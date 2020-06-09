@@ -14,14 +14,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = Application.class)
 public class ExecuteTestCase {
 
-//    @Autowired
-//    private TimeTask timeTask;
-//
-////    测试类注解使用junit
-//    @Test
-//    public void executeCse() throws Exception {
-//        timeTask.runTest();
-//    }
+    @Autowired
+    private TimeTask timeTask;
+
+//    测试类注解使用junit
+    @Test
+    public void executeCse() throws Exception {
+        timeTask.runTest();
+    }
 
     public void getid(){
         String createIDCardNo = CreateIDCardNo.getRandomID();

@@ -26,6 +26,6 @@ test:
 #定时任务配置
 #'index.job': '0 0 0 * * ?'
 #'thirdOrderCancel.job': '0 0/60 * * * ?'
-'autoRefund.job': '0 0/60  * * * ?'
+'autoRefund.job': '0 0/2  * * * ?'
 #'deleteCosUploadImg.job': '0 0 * * * ?'
 

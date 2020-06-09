@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -63,13 +64,23 @@ public class JsonUtils {
     }
 
     /**
-     * json字符串转换为map
+     * json字符串转换为map，转后map类型是key：value形式
      */
     public static <T> Map<String, Object> json2map(String jsonString) throws Exception {
         OBJECT_MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         return OBJECT_MAPPER.readValue(jsonString, Map.class);
     }
 
+    /**
+     * json 转 map对象，转后的map对象是key=value形式
+     * */
+    public static Map<String, Object> fromJsonStr(String json) {
+        Gson gson = new Gson();
+        Map<String, Object> infoMap = gson.fromJson(json,
+                new TypeToken<Map<String, String>>() {
+                }.getType());
+        return infoMap;
+    }
 
     /**
      * 深度转换json成map
@@ -140,7 +151,7 @@ public class JsonUtils {
     /**
      * 与javaBean json数组字符串转换为列表
      */
-    public static <T> List<T> json2list(String jsonArrayStr, Class<T> clazz) {
+    public static <T> List<T> json2list(String jsonArrayStr, Class<Map> clazz) {
         OBJECT_MAPPER.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         JavaType javaType = getCollectionType(ArrayList.class, clazz);
         List<T> lst = new ArrayList<>();
@@ -205,4 +216,5 @@ public class JsonUtils {
         String prettyJsonString = gson.toJson(je);
         return prettyJsonString;
     }
+
 }
