@@ -64,7 +64,7 @@ public class JsonUtils {
     }
 
     /**
-     * json字符串转换为map，转后map类型是key：value形式
+     * json字符串转换为map对象，转后map类型是key：value形式
      */
     public static <T> Map<String, Object> json2map(String jsonString) throws Exception {
         OBJECT_MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
