@@ -1,6 +1,8 @@
 
 ### 理论知识不能丢
 
+> 参考搜狗测试
+
 - 什么是框架
 
 总结：测试框架是测试开发过程中提取特定领域测试方法共性部分形成的体系结构，并不是一个现成可用的系统，
@@ -92,7 +94,7 @@ pom文件
 
 也可以直接下载修改源码后的extentreports依赖包,放到maven的依赖repository.com.aventstack下即可
 ```
-链接：https://pan.baidu.com/s/197R_mzx1sr8JZlEGJfVOTA 
+链接： 
 提取码：hosn 
 ```
 
