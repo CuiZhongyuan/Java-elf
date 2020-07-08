@@ -2,7 +2,12 @@ package com.interfaceproject.testngservice;
 
 import org.testng.annotations.*;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 public class TestNgOrderTest {
+
+    Date date = new Date();
 
     @BeforeSuite
     public void beforeSuite(){
@@ -53,7 +58,10 @@ public class TestNgOrderTest {
     public void afterTest(){
         System.out.println("@AfterTest注解执行");
     }
-
-
-
+//    三个不同的线程调用函数parallelTest5次。此外，1秒的超时保证没有任何线程将永远在该线程上阻塞。
+    @Test(threadPoolSize = 1,invocationCount = 10,timeOut = 1000)
+    public void parallelTest(){
+        DateFormat df4 = DateFormat.getDateTimeInstance(DateFormat.FULL,DateFormat.FULL);
+        System.out.println("并发测试007"+"-----"+df4.format(date));
+    }
 }
