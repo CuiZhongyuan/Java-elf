@@ -27,6 +27,8 @@ public class BaseTestngInit {
         //创建失败重试对象
         RetryListener retryListener = new RetryListener();
         //设置需要执行的测试用例类
+        testng.setTestClasses(new Class[] {});
+//        testng.setTestClasses(new Class[] { com.interfaceproject.testngservice.PostListCase.class});
         testng.setTestClasses(new Class[] { com.interfaceproject.testngservice.transportproject.UserCenterCase.class,
                 com.interfaceproject.testngservice.transportproject.ICCardCase.class});
         //添加监听器
