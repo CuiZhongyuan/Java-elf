@@ -3,7 +3,6 @@ package com.interfaceproject.utils;
 import com.interfaceproject.listener.ExtentTestNGIReporterListener;
 import com.interfaceproject.listener.RetryListener;
 import org.testng.TestNG;
-import org.testng.annotations.Test;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
@@ -15,7 +14,6 @@ public class BaseTestngInit {
     /**
      * 初始化testng
      */
-    @Test
     public  void baseTestngInitCode()  {
 
         //创建testng对象
@@ -27,10 +25,8 @@ public class BaseTestngInit {
         //创建失败重试对象
         RetryListener retryListener = new RetryListener();
         //设置需要执行的测试用例类
-        testng.setTestClasses(new Class[] {});
+        testng.setTestClasses(new Class[] { com.interfaceproject.testcase.PostListCase.class});
 //        testng.setTestClasses(new Class[] { com.interfaceproject.testngservice.PostListCase.class});
-        testng.setTestClasses(new Class[] { com.interfaceproject.testngservice.transportproject.UserCenterCase.class,
-                com.interfaceproject.testngservice.transportproject.ICCardCase.class});
         //添加监听器
         testng.addListener(reportListener);
         testng.addListener(retryListener);

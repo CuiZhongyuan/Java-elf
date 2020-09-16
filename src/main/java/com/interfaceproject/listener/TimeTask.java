@@ -47,12 +47,12 @@ public class TimeTask {
         //执行testng加载测试用例
         BaseTestngInit baseTestngInit = new BaseTestngInit();
         baseTestngInit.baseTestngInitCode();
-//        //打包成zip包位置
-//        String targetPath = "D:\\";
-//        //项目静态文件路径
-//        SendEmail.compressedFile("F:\\00_3IdeaProjects\\HttpClientUtils\\HttpClient\\src\\main\\resources\\static", targetPath);
-//        List<String> fileList = new ArrayList<>();
-//        fileList.add("D:\\static.zip");
-//        SendEmail.entity(host, userName, password, toSend, cc, "test", "1234123412", fileList);
+        //打包成zip包位置
+        String targetPath = "D:\\";
+        //项目静态文件路径
+        SendEmail.compressedFile("F:\\00_3IdeaProjects\\HttpClientUtils\\HttpClient\\src\\main\\resources\\static", targetPath);
+        List<String> fileList = new ArrayList<>();
+        fileList.add("D:\\static.zip");
+        SendEmail.entity(host, userName, password, toSend, cc, "test", "1234123412", fileList);
     }
 }
