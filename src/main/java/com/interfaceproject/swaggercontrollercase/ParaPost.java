@@ -1,4 +1,4 @@
-package com.interfaceproject.controller;
+package com.interfaceproject.swaggercontrollercase;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 // post请求上一个参数传入下一个请求示例
 @RestController
-@Api(value = "api",tags = "接口之间的相互调用--测试用例")
+@Api(value = "api",tags = "对接口测试用例")
 public class ParaPost {
 
     @Autowired

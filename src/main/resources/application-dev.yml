@@ -12,20 +12,58 @@ spring:
     username: root
     password: '000000'
     driverClassName: com.mysql.cj.jdbc.Driver
-    platform: mysql
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        session-stat-enable: true
+        session-stat-max-count: 10000
+        principal-session-name: admin
+        principal-cookie-name: admin
+        profile-enable: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: hxplAdmin
+        login-password: hxpl@admin#20190315
+  jpa:
+    hibernate:
+      ddl-auto: update
+      #naming:
+      # physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
 
   mail:
     host: "smtp.qq.com"
-    username: "xxx"
-    password: "xxx"
+    username: "365450906@qq.com"
+    password: "nrnojxnndlngbjea"
 test:
   mail:
-    send:
-    cc:
+    send: xxx@qq.com
+    cc: xxx@qq.com
 
 #定时任务配置
 #'index.job': '0 0 0 * * ?'
 #'thirdOrderCancel.job': '0 0/60 * * * ?'
-'autoRefund.job': '0 0/60  * * * ?'
+'autoRefund.job': '0 0/120  * * * ?'
 #'deleteCosUploadImg.job': '0 0 * * * ?'
 

@@ -1,22 +1,12 @@
-package com.interfaceproject.controller;
+package com.interfaceproject.swaggercontrollercase;
 
-import com.google.inject.internal.ErrorsException;
-import com.interfaceproject.entry.User;
-import com.interfaceproject.utils.HxHttpClient;
-import com.interfaceproject.utils.HxHttpClientResponseData;
-import com.interfaceproject.utils.JsonUtils;
 import com.interfaceproject.utils.hxutils.CreateIDCardNo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.http.Header;
-import org.apache.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -27,13 +17,11 @@ import java.util.Map;
  */
 
 @RestController
-@Api(value = "api",tags = "接口测试用例")
+@Api(value = "api",tags = "单接口测试用例")
 public class PostCase {
 
 
 //   其中@PostMapping注解=@RequestMapping(value = "/postjson", method = RequestMethod.POST)
-//    @RequestMapping(value = "/postjson", method = RequestMethod.POST)
-
 //    post 请求无 header 参数的请求示例
     @ApiOperation(value ="case1--无header的post用例")
     @PostMapping("/jsonpost")
@@ -56,7 +44,6 @@ public class PostCase {
         resMap.put("data","20200509");
         return resMap;
     }
-
 
     // post请求带header参数的示例，header中包含：token ，jwt,session等
     @ApiOperation(value = "case2--有header的post用例")

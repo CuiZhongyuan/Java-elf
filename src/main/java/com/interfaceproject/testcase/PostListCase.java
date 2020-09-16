@@ -1,4 +1,4 @@
-package com.interfaceproject.testngservice;
+package com.interfaceproject.testcase;
 
 
 import com.interfaceproject.utils.HxHttpClient;
