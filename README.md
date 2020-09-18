@@ -36,6 +36,7 @@ pom文件
              2.自动生成测试报告集成到项目中可以通过项目直接访问
 - 2020.05.29 1.优化testng测试用例由xml文件改为BaseTestngInit工具类引入
 - 2020.07.01 1.引入log4j2优化日志输出
+- 测试类入口：单元测试类下的InterfaceEntry类
              
 ###### 项目结构
 ![](https://upload-images.jianshu.io/upload_images/16753854-0e897d6647a42a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

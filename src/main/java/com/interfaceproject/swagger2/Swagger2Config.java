@@ -46,8 +46,8 @@ public class Swagger2Config {
 //                扫描多个controller包
                 .apis(
                         Predicates.or(
-                                RequestHandlerSelectors.basePackage("com.interfaceproject.hibernatecase.controller"),
-                                RequestHandlerSelectors.basePackage("com.interfaceproject.controller")
+                                RequestHandlerSelectors.basePackage("com.interfaceproject.developer.hibernatecase.controller"),
+                                RequestHandlerSelectors.basePackage("com.interfaceproject.developer.controller")
                         ))
 
                 .paths(PathSelectors.any())

@@ -29,7 +29,7 @@ public class BaseTestngInit {
 //        testng.setTestClasses(new Class[] { com.interfaceproject.testngservice.PostListCase.class});
         //添加监听器
         testng.addListener(reportListener);
-        testng.addListener(retryListener);
+//        testng.addListener(retryListener);
         //运行测试
         testng.run();
 
