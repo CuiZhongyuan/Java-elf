@@ -1,4 +1,4 @@
-package com.interfaceproject.swaggercontrollercase;
+package com.interfaceproject.swaggercontroller;
 
 import com.interfaceproject.utils.hxutils.CreateIDCardNo;
 import io.swagger.annotations.Api;

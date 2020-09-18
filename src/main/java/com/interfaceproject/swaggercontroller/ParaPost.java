@@ -1,4 +1,4 @@
-package com.interfaceproject.swaggercontrollercase;
+package com.interfaceproject.swaggercontroller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
