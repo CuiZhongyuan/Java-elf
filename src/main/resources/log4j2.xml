@@ -78,7 +78,7 @@
 
         <!-- additivity="false"表示在该logger中输出的日志不会再延伸到父层logger。 这里如果改为true，则会延伸到Root
             Logger，遵循Root Logger的配置也输出一次 -->
-        <Logger name="com.interfaceproject.utils.ExecuteTimeAspect" level="${log_level}" additivity="false">
+        <Logger name="com.javaelf.utils.ExecuteTimeAspect" level="${log_level}" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
         <Root level="${log_level}">

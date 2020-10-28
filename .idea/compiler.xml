@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HttpClientPackage" />
+        <module name="java-elf" />
         <module name="Java-elf" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HttpClientPackage" options="-parameters" />
       <module name="Java-elf" options="-parameters" />
+      <module name="java-elf" options="-parameters" />
     </option>
   </component>
 </project>

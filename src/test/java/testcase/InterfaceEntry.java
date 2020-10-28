@@ -1,6 +1,6 @@
 package testcase;
 
-import com.interfaceproject.utils.BaseTestngInit;
+import com.javaelf.utils.BaseTestngInit;
 import org.testng.annotations.Test;
 
 /**

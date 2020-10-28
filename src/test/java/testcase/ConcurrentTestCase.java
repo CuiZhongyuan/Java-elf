@@ -1,8 +1,8 @@
 package testcase;
 
 
-import com.interfaceproject.utils.JsonUtils;
-import com.interfaceproject.utils.RestTemplateUtils;
+import com.javaelf.utils.JsonUtils;
+import com.javaelf.utils.RestTemplateUtils;
 import org.springframework.http.ResponseEntity;
 import org.testng.annotations.Test;
 import sun.misc.Lock;
