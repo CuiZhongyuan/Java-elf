@@ -66,13 +66,6 @@
             <artifactId>easypoi-spring-boot-starter</artifactId>
             <version>4.2.0</version>
         </dependency>
-        <!--集成extentreports报告-->
-        <!--        <dependency>-->
-        <!--            <groupId>com.aventstack</groupId>-->
-        <!--            <artifactId>extentreports-java</artifactId>-->
-        <!--            <version>3.1.5</version>-->
-        <!--        </dependency>-->
-        <!--引入allure2的依赖，使用allure报告-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>

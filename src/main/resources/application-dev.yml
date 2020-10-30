@@ -51,10 +51,12 @@ spring:
     properties:
       hibernate:
         enable_lazy_load_no_trans: true
-
+#读取excel参数说明（针对变量sheet设置） ptah:excel路径、sheetIndex需要读取sheet的索引、titleRows：表标题的行数、headerRows：表头行数
 testcaseexcel:
-  cases: src/main/resources/testcaseexcel/java-elfCase.xls
-
+  path: src/main/resources/testcaseexcel/java-elfCase.xls
+  sheetIndex: 2
+  titleRows: 1
+  headerRows: 1
 
 
 #  mail:

@@ -19,6 +19,6 @@ public class InterfaceMessageDto {
     private String apiName;
     @Excel(name = "Type(接口提交方式)",orderNum = "3",width = 20)
     private String type;
-    @Excel(name = "Url(被测接口地址)",orderNum = "4",width = 20)
+    @Excel(name = "Url(被测接口地址)",orderNum = "4",width = 80)
     private String url;
 }
