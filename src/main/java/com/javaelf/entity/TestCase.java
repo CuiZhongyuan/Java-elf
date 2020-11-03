@@ -29,21 +29,21 @@ public class TestCase {
          * url的id
          */
         @GeneratedValue(strategy= GenerationType.IDENTITY)
+        @NotBlank(message = "id不能为空")
         @Id
         private Long id;
         /**
          * 绑定状态 0 正向测试 1 反向测试
          */
-        private Integer caseStatus = 1;
+        private Integer caseStatus;
         /**
         * 请求地址address
         */
-        @NotBlank(message = "urlid不能为空")
         private Long interfacemsgId ;
         /**
          * 用例描述
          */
-        private String desc;
+        private String descCase;
         /**
          * 请求头参数
          */
