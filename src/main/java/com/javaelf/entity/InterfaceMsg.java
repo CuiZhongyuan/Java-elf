@@ -11,54 +11,36 @@ import javax.validation.constraints.NotBlank;
 
 /**
 *
-*测试用例 --PO（Persistent Object）：持久化对象
+*URL访问路径 --PO（Persistent Object）：持久化对象
 *
-*@author wz
+*@author CZY
 *@date 2020-5-31 13:43:37
 **/
 @Setter
 @Getter
 @Entity
-@Table(name = "logincase")
+@Table(name = "interfaceMsg")
 @JsonIgnoreProperties(value={"hibernateLazyInitializer","handler"})
 @DynamicInsert
 @DynamicUpdate
-public class Logincase {
+public class InterfaceMsg {
         private static final long serialVersionUID = 1L;
         /**
          * url的id
          */
         @GeneratedValue(strategy= GenerationType.IDENTITY)
+        @NotBlank(message = "id不能为空")
         @Id
         private Long id;
         /**
-         * 绑定状态 0 正向测试 1 反向测试
-         */
-        private Integer caseStatus = 1;
+        * 请求类型：get/post/put/delete/update
+        */
+        @NotBlank(message = "请求类型不能为空")
+        private String requestType ;
         /**
         * 请求地址address
         */
-        @NotBlank(message = "urlid不能为空")
-        private Long urlId ;
-        /**
-         * 登录账号
-         */
-        private String name;
-        /**
-         * 登录密码
-         */
-        private String pwd;
-        /**
-         * 登录密码
-         */
-        private String expect;
-        /**
-         * 登录密码
-         */
-        private String actual;
-        /**
-         * 登录密码
-         */
-        private String urlPath;
+        @NotBlank(message = "url地址不能为空")
+        private String urlAddress;
 
 }
