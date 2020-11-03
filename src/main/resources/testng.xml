@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="2"  allow-return-values="true">
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL" value="https://www.jianshu.com/u/acf637a73f52/" />
+    <parameter name="测试人员" value="Coding测试" />
+    <test name="User allure2" allow-return-values="true">
+        <classes>
+            <class name="com.javaelf.testcase.EasypoiWxTestCase" />
+        </classes>
+    </test>
+</suite>
