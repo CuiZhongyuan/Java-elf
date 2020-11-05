@@ -7,10 +7,10 @@
 - 数据驱动数据驱动目前实行两种途径
 
 1、excel数据驱动（比较传统）
-示例代码见：EasypoiDatasCase类
+示例代码见：EasypoiWxCaseService类
 
 2、数据库数据驱动（更易用于扩展）
-示例代码见：JpaDatasCase类
+示例代码见：JpaWXCaseService类
 
 可以根据自己维护用例的习惯进行其中的数据驱动选择
 
