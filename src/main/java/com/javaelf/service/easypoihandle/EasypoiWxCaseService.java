@@ -23,7 +23,7 @@ import java.util.Map;
  */
 @Component
 public class EasypoiWxCaseService extends TestBase {
-    public void gettoken() {
+    public void getToken() {
         for (InterfaceMessageDto interfaceMessageDto : caseMessageList) {
             if (interfaceMessageDto.getApiId() != null) {
                 for (TestCaseDto testCaseDto : testCaseDtoList) {

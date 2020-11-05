@@ -20,7 +20,7 @@ public class QYWXTestCase extends TestBase {
     @Description("easypi示例--企业微信获取token覆盖测试")
     @Test
     public void gettokenJpaCase() {
-        easypoiWxCaseService.gettoken();
+        easypoiWxCaseService.getToken();
     }
     @Severity( SeverityLevel.BLOCKER)
     @Description("jpa示例--企业微信获取token覆盖测试")
