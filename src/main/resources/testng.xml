@@ -6,7 +6,7 @@
     <parameter name="测试人员" value="Coding测试" />
     <test name="User allure2" allow-return-values="true">
         <classes>
-            <class name="com.javaelf.testcase.EasypoiWxTestCase" />
+            <class name="com.javaelf.testcase.QYWXTestCase" />
         </classes>
     </test>
 </suite>

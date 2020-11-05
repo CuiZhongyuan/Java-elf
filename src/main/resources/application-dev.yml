@@ -8,7 +8,7 @@ logging:
 
 spring:
   datasource:
-    url: jdbc:mysql://192.168.1.225:3306/java_elf?Unicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=GMT
+    url: jdbc:mysql://192.168.1.225:3306/javaelf?Unicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=GMT
     username: root
     password: '000000'
     driver-class-name: com.mysql.cj.jdbc.Driver
