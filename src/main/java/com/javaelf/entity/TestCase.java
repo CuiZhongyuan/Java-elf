@@ -37,7 +37,7 @@ public class TestCase {
          */
         private Integer caseStatus;
         /**
-        * 请求地址address
+        * 接口信息对应的id
         */
         private Long interfacemsgId ;
         /**

@@ -12,9 +12,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.util.List;
-
-@SpringBootTest
 @Component
+@SpringBootTest
 public class TestBase  extends AbstractTestNGSpringContextTests {
     /**
      * 使用Easypoi获取excel数据，传递，如果使用数据库这里不引用即可

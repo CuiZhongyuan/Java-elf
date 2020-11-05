@@ -1,4 +1,4 @@
-package com.javaelf.testcase;
+package com.javaelf.service.easypoihandle;
 
 import com.javaelf.base.TestBase;
 import com.javaelf.dto.InterfaceMessageDto;
@@ -12,20 +12,18 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.model.Status;
+import org.springframework.stereotype.Component;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
 /**
- * 企业微信接口测试
+ * 企业微信接口测试--easypoi驱动excel示例
  */
-@Listeners(com.javaelf.listener.AssertListener.class)
-public class EasypoiWxTestCase extends TestBase {
-    @Severity( SeverityLevel.BLOCKER)
-    @Description("企业微信获取token覆盖测试")
-    @Test
-    public void gettokenCase() throws Exception {
+@Component
+public class EasypoiWxCaseService extends TestBase {
+    public void gettoken() {
         for (InterfaceMessageDto interfaceMessageDto : caseMessageList) {
             if (interfaceMessageDto.getApiId() != null) {
                 for (TestCaseDto testCaseDto : testCaseDtoList) {
@@ -53,8 +51,8 @@ public class EasypoiWxTestCase extends TestBase {
                                 Allure.step("测试通过", Status.PASSED);
                             }else {
                                 Allure.step("断言失败", Status.FAILED);
-                                AssertionOverrideUtil.verifyEquals(0, expected);
                             }
+                            AssertionOverrideUtil.verifyEquals(0, expected);
                         }
                     }
                 }

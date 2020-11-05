@@ -1,4 +1,4 @@
-package com.javaelf.DataForger;
+package com.javaelf.dataForger;
 
 import com.github.javafaker.Faker;
 import org.springframework.stereotype.Component;
