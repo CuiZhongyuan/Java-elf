@@ -1,6 +1,7 @@
 package com.javaelf.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -66,10 +67,14 @@ public class JsonUtils {
     /**
      * json字符串转换为map，转后map类型是key：value形式
      */
-    public static <T> Map<String, Object> json2map(String jsonString) throws Exception {
+    public static <T> Map<String, Object> json2map(String jsonString)  {
         if (jsonString != null) {
             OBJECT_MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-            return OBJECT_MAPPER.readValue(jsonString, Map.class);
+            try {
+                return OBJECT_MAPPER.readValue(jsonString, Map.class);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
@@ -154,7 +159,7 @@ public class JsonUtils {
     /**
      * 与javaBean json数组字符串转换为列表
      */
-    public static <T> List<T> json2list(String jsonArrayStr, Class<Map> clazz) {
+    public static <T> List<T> json2list(String jsonArrayStr, Class<T> clazz) {
         OBJECT_MAPPER.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         JavaType javaType = getCollectionType(ArrayList.class, clazz);
         List<T> lst = new ArrayList<>();
