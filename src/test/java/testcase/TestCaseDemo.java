@@ -86,4 +86,43 @@ public class TestCaseDemo {
         System.out.println(responseEntity);
     }
 
+    /**
+     * 二分查找,方法
+     * */
+    @Test
+    public int case8(int[] num,int startNum,int endNum,int findNum){
+        if (startNum <= endNum){
+            //算出中间位置
+            int middle = (startNum+endNum)/2;
+            //数组中间数字
+            int middleValue = num[middle];
+            //二分查找
+            if (findNum == middleValue){
+                return middle;
+            }else if (findNum < middle){
+                //小于中间值，在中间值之前的数据中查找，使用递归
+                return case8(num,startNum,middle-1,findNum);
+            }else {
+                //大于中间值在，在中间值之前查找
+                return case8(num,middle+1,endNum,findNum);
+            }
+        }
+        return -1;
+    }
+
+    @Test
+    public void case9(){
+        //要查到的数组
+        int[] binaryNums = new int[100];
+        //一次循环加入数据
+        for (int i=0;i<100;i++){
+            binaryNums[i] =(i+1);
+        }
+        //定义要查找到的值
+        int findNum = 65;
+        int findResult = case8(binaryNums,0,binaryNums.length-1,findNum);
+        System.out.println("元素的位置是："+(findResult+1));
+    }
+
+
 }
