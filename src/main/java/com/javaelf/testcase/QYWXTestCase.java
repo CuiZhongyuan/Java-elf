@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 @Listeners(com.javaelf.listener.AssertListener.class)
 public class QYWXTestCase extends TestBase {
     @Autowired
