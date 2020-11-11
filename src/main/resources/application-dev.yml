@@ -60,10 +60,6 @@ testcaseexcel:
   titleRows: 1
   headerRows: 1
 
-# testng.xml 路径配置
-testng:
-  path: src/main/resources/testng.xml
-
 
 #  mail:
 #    host: "smtp.qq.com"
