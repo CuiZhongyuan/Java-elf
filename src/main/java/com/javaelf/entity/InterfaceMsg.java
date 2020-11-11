@@ -1,5 +1,6 @@
 package com.javaelf.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
@@ -42,5 +43,9 @@ public class InterfaceMsg {
         */
         @NotBlank(message = "url地址不能为空")
         private String urlAddress;
+        /**
+         * 备注信息
+         */
+        private String remark;
 
 }
