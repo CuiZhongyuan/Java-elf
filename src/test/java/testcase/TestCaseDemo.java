@@ -25,12 +25,6 @@ public class TestCaseDemo {
     }
 
     @Test
-    public void case2(){
-        String excelCasePath = (String) LoadStaticConfigUtil.getCommonYml("testcaseexcel.cases");
-        String var = VariableUtil.replaceVariables("${loginName}");
-        System.out.println(var);
-    }
-    @Test
     public void case3(){
         String url = "http://192.168.1.57:811/platform-product/commodity/page-others";
         String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMzIxNDAwMTQ5NjAzMzg5NDQwIiwiYXVkIjoiMDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjYiLCJjb21wYW55SWRzIjpbMTI2MDQ2MzA2NzEwODYxMDA0OF0sIm5iZiI6MTYwNDAyMTM3MSwiaXNzIjoicmVzdGFwaXVzZXIiLCJleHAiOjE2MDQwMjg1NzEsInVzZXJJZCI6MTMyMTQwMDE0OTYwMzM4OTQ0MCwiaWF0IjoxNjA0MDIxMzcxLCJqdGkiOiJiMzBmZjJjMi1kZTUxLTQ4ODYtYjNkMy01ODQ2YWIxOTc4NjkifQ.d73DENmtduK7M53HqVhIYb4Aq_1nOWAtvfBzOk3Wmzk";
