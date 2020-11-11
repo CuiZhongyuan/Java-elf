@@ -24,5 +24,4 @@ public class TestResultsController {
     public List<String> getACtual(){
         return testResultService.getActualTestResult();
     }
-
 }
