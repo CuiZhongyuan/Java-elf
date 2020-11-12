@@ -51,15 +51,6 @@ spring:
     properties:
       hibernate:
         enable_lazy_load_no_trans: true
-#读取excel参数说明（针对变量sheet设置） ptah:excel路径、sheetIndex需要读取sheet的索引、titleRows：表标题的行数、headerRows：表头行数
-testcaseexcel:
-  path: src/main/resources/testcaseexcel/企业微信接口测试集.xls
-  sheet1Index: 0
-  sheet2Index: 1
-  sheet3Index: 2
-  titleRows: 1
-  headerRows: 1
-
 
 #  mail:
 #    host: "smtp.qq.com"
