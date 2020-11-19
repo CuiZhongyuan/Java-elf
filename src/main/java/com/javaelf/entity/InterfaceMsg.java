@@ -44,6 +44,10 @@ public class InterfaceMsg {
         @NotBlank(message = "url地址不能为空")
         private String urlAddress;
         /**
+         * 请求参数
+         */
+        private String params;
+        /**
          * 备注信息
          */
         private String remark;
