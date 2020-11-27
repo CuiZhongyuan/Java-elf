@@ -3,7 +3,6 @@ package com.javaelf.service;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -14,6 +13,16 @@ public interface TestResultService {
      * @return
      */
     List<String> getActualTestResult();
-
-    ArrayList<String> mandatory(String reqJson);
+    /**
+     * 动态生成必填项未传异常测试用例集
+     *
+     * @return
+     */
+    String mandatory(String reqJson);
+    /**
+     * 动态生成混合参数的测试用例集
+     *
+     * @return
+     */
+    String hybrid(String reqJson);
 }

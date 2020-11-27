@@ -1,11 +1,9 @@
 package com.javaelf.controller;
 
 import com.javaelf.service.TestResultService;
-import com.javaelf.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 
@@ -28,8 +26,22 @@ public class TestResultsController {
     public List<String> getACtual(){
         return testResultService.getActualTestResult();
     }
-    @PostMapping(value = "/test/mandatory")
-    public ArrayList<String> MandatoryTestCase(@RequestBody String reqJson){
+    /**
+     * 区分必填项和非必填项
+     * 通过组合算法动态生成参数某一必填项未传的异常测试用例
+     *
+     **/
+    @PostMapping(value = "/test/mandatoryParams")
+    public String MandatoryTest(@RequestBody String reqJson){
         return testResultService.mandatory(reqJson);
+    }
+    /**
+     * 不区分参数的必填项和非必须
+     * 通过组合算法动态生成参数某一填项未传的测试用例组
+     *
+     **/
+    @PostMapping(value = "/test/hybridParams")
+    public String Mandatory(@RequestBody String reqJson){
+        return testResultService.hybrid(reqJson);
     }
 }

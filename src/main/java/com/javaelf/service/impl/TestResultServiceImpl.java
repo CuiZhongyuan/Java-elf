@@ -4,9 +4,11 @@ import com.javaelf.dao.TestCaseDao;
 import com.javaelf.entity.TestCase;
 import com.javaelf.service.TestResultService;
 import com.javaelf.utils.JsonUtils;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.testng.annotations.Test;
+
+
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -31,13 +33,11 @@ public class TestResultServiceImpl implements TestResultService {
         return getActual;
     }
     /**
-     * 必填项为空的用例组合---根据必填项遍历生成异常组合+非必填项
+     * 必填项未传的用例组合---根据参数必填项某一个未传+非必传参数，组合生成新的请求参数用例
      *
-     * */
-    @Override
-    public ArrayList<String> mandatory(String reqJson) {
-        ArrayList<String> testList = new ArrayList<>();
-//        String json = "{\"yes\":{\"parames1\":\"11\",\"parames2\":\"22\",\"parames3\":\"33\"},\"no\":{\"parames4\":\"44\",\"parames5\":\"55\"}}";
+     *
+     * @return*/
+    public String mandatory(String reqJson) {
         Map map = JsonUtils.json2map(reqJson);
         Map yesMap = (Map) map.get("yes");
         Map noMap = (Map) map.get("no");
@@ -48,14 +48,53 @@ public class TestResultServiceImpl implements TestResultService {
             hashMap.put(m.toString(), yesMap.get(m));
             return hashMap;
         }).collect(Collectors.toList());
+        Map<String,Object> objectMap = new HashMap<>();
         for (int i = 0; i < list.size(); i++) {
-            for (int j = list.size() - 1; j > i; j--) {
-                Object o = j <= i ? "" : list.get(j);
-                String s = JsonUtils.mapToJson(list.get(i)) + "," + JsonUtils.mapToJson(list.get(j))+","+JsonUtils.mapToJson(noMap);
-                String response = s.replace("},{",",");
-                testList.add(response);
-            }
+            StringBuilder stringBuilder = new StringBuilder();
+            int finalI = i;
+            list.stream().peek(mapParam -> {
+                if (!list.get(finalI).equals(mapParam)) {
+                    stringBuilder.append(JsonUtils.mapToJson(mapParam));
+                }
+            }).collect(Collectors.toList());
+            stringBuilder.append(JsonUtils.mapToJson(noMap));
+            objectMap.put("必填项" + list.get(i) + "为空的请求参数: ", stringBuilder.toString().replace("}{", ","));
         }
-        return testList;
+        String str = JsonUtils.mapToJson(objectMap);
+        str = StringEscapeUtils.unescapeJava(str);
+        str=str.replace(" \":\"{"," \":{");
+        str=str.replace("}\",\"","},\"");
+        str=str.replace("}\"}","}}");
+        System.out.println(str);
+        return str;
     }
+
+    /**
+     * 根据参数数生成某一个参数缺省测试用例集
+     *
+     *
+     * @return*/
+    @Override
+    public String hybrid(String reqJson) {
+         Map map = JsonUtils.json2map(reqJson);
+         TreeMap treeMap = new TreeMap(map);
+         Set set = treeMap.keySet();
+         TreeMap<String,Object> treeMap1 = new TreeMap();
+         set.forEach(key ->{
+             Map<String,String> reqMap = new HashMap();
+             treeMap.forEach((k,v)->{
+                 if (key.equals(k)){
+                     reqMap.put(k.toString(),"");
+                 }else {
+                     reqMap.put(k.toString(),v.toString());
+                 }
+             });
+             String format = String.format("参数值：%s为空返回结果", key);
+             treeMap1.put(format,reqMap);
+         });
+
+        return JsonUtils.mapToJson(treeMap1);
+    }
+
+
 }

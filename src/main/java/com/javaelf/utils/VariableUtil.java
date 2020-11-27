@@ -6,7 +6,6 @@ import com.javaelf.entity.VariableSubstitution;
 import java.lang.reflect.Method;
 import java.util.*;
 
-
 /**
  * 变量名替换变量值工具类
  * 读取测试数据中的变量数据把变量名替换为变量值

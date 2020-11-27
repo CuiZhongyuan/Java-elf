@@ -1,16 +1,12 @@
 package testcase;
 
-import com.javaelf.utils.JsonUtils;
-import com.javaelf.utils.LoadStaticConfigUtil;
-import com.javaelf.utils.RestTemplateUtils;
-import com.javaelf.utils.VariableUtil;
+import com.javaelf.utils.*;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TestCaseDemo {
@@ -116,6 +112,115 @@ public class TestCaseDemo {
         int findNum = 65;
         int findResult = case8(binaryNums,0,binaryNums.length-1,findNum);
         System.out.println("元素的位置是："+(findResult+1));
+    }
+    @Test
+    public void mandatory() {
+        String json = "{\"yes\":{\"parames1\":\"11\",\"parames2\":\"22\",\"parames3\":\"33\",\"parames4\":\"44\"},\"no\":{\"parames8\":\"88\",\"parames9\":\"99\"}}";
+        Map map = JsonUtils.json2map(json);
+        Map yesMap = (Map) map.get("yes");
+        Map noMap = (Map) map.get("no");
+        Set set = yesMap.keySet();
+        List<Map<String, Object>> list = (List<Map<String, Object>>) set.stream().map(m -> {
+            Map<String, Object> hashMap = new HashMap<>();
+            //获取需要组合的必填项参数
+            hashMap.put(m.toString(), yesMap.get(m));
+            return hashMap;
+        }).collect(Collectors.toList());
+        Map<String, Object> objectMap = new HashMap<>();
+        Map<String, Object> valueMap = new HashMap<>();
+        for (int i = 0; i < list.size(); i++) {
+            StringBuilder stringBuilder = new StringBuilder();
+            int finalI = i;
+            list.stream().peek(mapParam -> {
+                if (!list.get(finalI).equals(mapParam)) {
+                    stringBuilder.append(JsonUtils.mapToJson(mapParam));
+                }
+            }).collect(Collectors.toList());
+            stringBuilder.append(JsonUtils.mapToJson(noMap));
+            objectMap.put("必填项" + list.get(i) + "为空的请求参数===>", stringBuilder.toString().replace("}{", ","));
+        }
+        System.out.println(JsonUtils.mapToJson(objectMap));
+    }
+
+    @Test
+    public void mandatory22() {
+        String json = "{\"yes\":{\"parames1\":\"11\",\"parames2\":\"22\",\"parames3\":\"33\",\"parames4\":\"44\",\"parames5\":\"55\"},\"no\":{\"parames8\":\"88\",\"parames9\":\"99\"}}";
+        String json2 = "{\"yes\": {\"parames1\": \"11\",\"parames2\": \"22\",\"parames3\": \"33\",\"parames4\": \"44\",\"parames5\": \"55\"},\"no\": {\"parames4\": \"88\",\"parames5\": \"99\"}}";
+        Map map = JsonUtils.json2map(json2);
+        Map yesMap = (Map) map.get("yes");
+        Map noMap = (Map) map.get("no");
+        Set set = yesMap.keySet();
+        List<Map<String, Object>> list = (List<Map<String, Object>>) set.stream().map(m -> {
+            Map<String, Object> hashMap = new HashMap<>();
+            //获取需要组合的必填项参数
+            hashMap.put(m.toString(), yesMap.get(m));
+            return hashMap;
+        }).collect(Collectors.toList());
+        Map<String,Object> objectMap = new HashMap<>();
+        for (int i = 0; i < list.size(); i++) {
+            StringBuilder stringBuilder = new StringBuilder();
+            int finalI = i;
+            list.stream().peek(mapParam -> {
+                if (!list.get(finalI).equals(mapParam)) {
+                    stringBuilder.append(JsonUtils.mapToJson(mapParam));
+                }
+            }).collect(Collectors.toList());
+            stringBuilder.append(JsonUtils.mapToJson(noMap));
+            objectMap.put("必填项" + list.get(i) + "为空的请求参数: ", stringBuilder.toString().replace("}{", ","));
+        }
+        String str = JsonUtils.mapToJson(objectMap);
+        str = StringEscapeUtils.unescapeJava(str);
+        str=str.replace(" \":\"{"," \":{");
+        str=str.replace("}\",\"","},\"");
+        str=str.replace("}\"}","}}");
+        System.out.println(str);
+    }
+    @Test
+    public void mandatory1() {
+        String json = "{\"parames1\": \"11\",\"parames2\": \"22\",\"parames3\": \"33\"}";
+            Map map = JsonUtils.json2map(json);
+            Set set = map.keySet();
+            Map requestMap = new HashMap();
+            List<Map<String, Object>> list = (List<Map<String, Object>>) set.stream().map(m -> {
+                Map<String, Object> hashMap = new HashMap<>();
+                //获取需要组合的必填项参数
+                hashMap.put(m.toString(), map.get(m));
+                return hashMap;
+            }).collect(Collectors.toList());
+            for (int i = 0; i < list.size(); i++) {
+                int finalI = i;
+                set.stream().forEach(k ->{
+                    requestMap.put("参数值："+k+"为空返回结果",map.get(k));
+                });
+            }
+            String str = JsonUtils.mapToJson(requestMap);
+//            str = StringEscapeUtils.unescapeJava(str);
+//            str=str.replace(" \":\"{"," \":{");
+//            str=str.replace("}\",\"","},\"");
+//            str=str.replace("}\"}","}}");
+            System.out.println(str);
+    }
+
+    @Test
+    public void hybird(){
+        String json = "{\"parames1\": \"11\",\"parames2\": \"22\",\"parames3\": \"33\"}";
+        Map map = JsonUtils.json2map(json);
+        TreeMap treeMap = new TreeMap(map);
+        Set set = treeMap.keySet();
+        TreeMap<String,Object> treeMap1 = new TreeMap();
+        set.forEach(key ->{
+            Map<String,String> reqMap = new HashMap();
+            treeMap.forEach((k,v)->{
+                if (key.equals(k)){
+                    reqMap.put(k.toString(),"");
+                }else {
+                    reqMap.put(k.toString(),v.toString());
+                }
+            });
+            String format = String.format("参数值：%s为空返回结果", key);
+            treeMap1.put(format,reqMap);
+        });
+        System.out.println(JsonUtils.mapToJson(treeMap1));
     }
 
 

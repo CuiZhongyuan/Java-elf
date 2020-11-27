@@ -165,6 +165,17 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>2.9.2</version>
         </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.mifmif/generex -->
+        <dependency>
+            <groupId>com.github.mifmif</groupId>
+            <artifactId>generex</artifactId>
+            <version>1.0.2</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

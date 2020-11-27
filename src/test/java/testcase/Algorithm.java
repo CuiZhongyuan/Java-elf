@@ -4,12 +4,10 @@ import com.javaelf.utils.JsonUtils;
 import org.testng.annotations.Test;
 import org.testng.util.Strings;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
+import java.util.*;
 
 public class Algorithm {
+    int[] numss = {56,47,25,89,46,5,15,23};
 
     //===================================二分查找，使用了递归调用==========================
 
@@ -181,7 +179,7 @@ public class Algorithm {
     }
 
 
-    //去重
+    //stream流去重
     @Test
     public void array(){
         int[] numss = {56,47,25,47,56};
@@ -238,4 +236,11 @@ public class Algorithm {
             return left + 1;
         }
 
+        //利用Arrays中的Sort函数排序
+        @Test
+        public void ArraysSort() {
+        Arrays.sort(numss); //默认升序排列
+        for (int i = 0; i < numss.length; i++) {
+            System.out.print(numss[i]+"、");
+        }}
 }
