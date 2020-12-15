@@ -34,23 +34,17 @@ mvn clean test
 	"参数值：parames1为空返回结果": {
 		"parames1": "",
 		"parames2": "22",
-		"parames5": "55",
-		"parames3": "33",
-		"parames4": "44"
+		"parames3": "33"
 	},
 	"参数值：parames2为空返回结果": {
 		"parames1": "11",
 		"parames2": "",
-		"parames5": "55",
-		"parames3": "33",
-		"parames4": "44"
+		"parames3": "33"
 	},
 	"参数值：parames3为空返回结果": {
 		"parames1": "11",
 		"parames2": "22",
-		"parames5": "55",
-		"parames3": "",
-		"parames4": "44"
+		"parames3": ""
 	}
 }
 
