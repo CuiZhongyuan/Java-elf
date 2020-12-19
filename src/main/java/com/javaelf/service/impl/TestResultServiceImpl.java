@@ -7,7 +7,7 @@ import com.javaelf.utils.JsonUtils;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.testng.annotations.Test;
 
 
 import java.util.*;
@@ -96,5 +96,114 @@ public class TestResultServiceImpl implements TestResultService {
         return JsonUtils.mapToJson(treeMap1);
     }
 
+    /**
+     * 异常测试--必填项缺省
+     *接受正确参数--返回某个必填项参数缺省的入参参数
+     * 默认取第一个参数为必填项，使用时需注意
+     * @reqJson
+     * */
+    public String getMissParams(String reqJson){
+         Map<String,Object> reqMap = JsonUtils.json2map(reqJson);
+         Set set = reqMap.keySet();
+         List<Map<String,Object>> list = (List<Map<String, Object>>) set.stream().map(m ->{
+             Map respMap = new HashMap();
+             respMap.put(m.toString(),reqMap.get(m));
+             return respMap;
+         }).collect(Collectors.toList());
+         list.remove(0);
+         String respStr = JsonUtils.obj2json(list);
+         if (respStr.contains("},{")){
+             respStr = respStr.replace("},{",",");
+         }
+         return respStr;
+    }
+    /**
+     * 异常测试--必填项为""
+     *接受正确参数--返回某个必填项参数值为：”“
+     * 默认取第一个参数为必填项，使用时需注意
+     * @reqJson
+     * */
+    public String getParamsNull(String reqJson){
+         Map<String,Object> reqMap = JsonUtils.json2map(reqJson);
+         Set set = reqMap.keySet();
+         List<Map<String,Object>> list = (List<Map<String, Object>>) set.stream().map(m ->{
+           Map respMap = new HashMap();
+           respMap.put(m.toString(),reqMap.get(m));
+           return respMap;
+         }).collect(Collectors.toList());
+         Map replaceMap = list.get(0);
+         Set set1 = replaceMap.keySet();
+         set1.forEach(key ->{
+             replaceMap.put(key,"");
+         });
+         String respStr = JsonUtils.obj2json(list);
+        if (respStr.contains("},{")){
+            respStr = respStr.replace("},{",",");
+        }
+        return respStr;
+    }
+    /**
+     * 异常测试--必填项参数值长度超长测试
+     *接受正确参数--返回某个必填项参数值超过设置长度
+     * 默认取第一个参数为必填项，使用时需注意
+     * @reqJson
+     * */
+    public String getTooLong(String reqJson){
+        Map<String,Object> reqMap = JsonUtils.json2map(reqJson);
+        Set set = reqMap.keySet();
+        List<Map<String,Object>> list = (List<Map<String, Object>>) set.stream().map(m ->{
+            Map respMap = new HashMap();
+            respMap.put(m.toString(),reqMap.get(m));
+            return respMap;
+        }).collect(Collectors.toList());
+        Map replaceMap = list.get(0);
+        Set set1 = replaceMap.keySet();
+        set1.forEach(key ->{
+            //由于参数值长度不固定，暂时不动态获取赋值，目前写死长度为256，有点low了，^ -^ 数据库varchar类型默认是255
+            replaceMap.put(key,"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +
+                    "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +
+                    "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +
+                    "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +
+                    "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +
+                    "TTTTTT");
+        });
+        String respStr = JsonUtils.obj2json(list);
+        if (respStr.contains("},{")){
+            respStr = respStr.replace("},{",",");
+        }
+        return respStr;
+    }
+    /**
+     * 异常测试--必填项参数类型不一致
+     *接受正确参数--返回某个必填项参数类型不一致
+     * 默认取第一个参数为必填项，使用时需注意
+     * @reqJson
+     * */
+    public String getTypeError(String reqJson){
+        Map<String,Object> reqMap = JsonUtils.json2map(reqJson);
+        Set set = reqMap.keySet();
+        List<Map<String,Object>> list = (List<Map<String, Object>>) set.stream().map(m ->{
+            Map respMap = new HashMap();
+            respMap.put(m.toString(),reqMap.get(m));
+            return respMap;
+        }).collect(Collectors.toList());
+        Map replaceMap = list.get(0);
+        Set set1 = replaceMap.keySet();
+        set1.forEach(key ->{
+            //获取value类型
+            if ( replaceMap.get(key) instanceof String){
+                //Integer.parseInt()就是把String类型转化为int类型
+                replaceMap.put(key,Integer.parseInt((String) replaceMap.get(key)));
+            }else if (replaceMap.get(key) instanceof Integer){
+                replaceMap.put(key,replaceMap.get(key).toString());
+            }
+        });
+        String respStr = JsonUtils.obj2json(list);
+        if (respStr.contains("},{")){
+            respStr = respStr.replace("},{",",");
+        }
+        return respStr;
+
+    }
 
 }
