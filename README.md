@@ -21,6 +21,12 @@ mvn clean test
 ```
 执行testng.xml文件中配置的测试套件
 
+4、本地maven编译推送至远程maven库
+```
+mvn clean deploy -X -Dmaven.test.skip=true
+
+```
+
 4、新增测试用例动态生成（必填项为空，必填项缺省、超长长度...），简单示例
 ```
 //请求参数
