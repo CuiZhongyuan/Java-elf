@@ -1,0 +1,14 @@
+@startmindmap
+'https://plantuml.com/mindmap-diagram
+title 脑图
+
+* 根节点
+** 节点1
+*** 节点11
+** 节点2
+*** 节点22
+** 节点3
+*** 节点33
+*** 节点34
+
+@endmindmap
