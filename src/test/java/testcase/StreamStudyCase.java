@@ -99,5 +99,97 @@ public class StreamStudyCase {
          });
         System.out.println(JsonUtils.obj2json(listMap));
     }
+    //Lsit集合是可重复、有序存入取出
+    @Test
+    public void case5(){
+        List<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("A");
+        System.out.println(list);
+    }
+    //Set集合，没有重复元素，存取无序
+    @Test
+    public void case6(){
+        int[] num = {2,5,7,5};
+        Set<String> set = new HashSet<>();
+        for (int i =0 ; i<num.length;i++){
+            set.add(String.valueOf(num[i]));
+        }
+        String str = "anah454";
+        String str1 = str.replace("a","bb");
+        String[] str2 = str.split("h");
+        System.out.println(Arrays.toString(str2));
+        System.out.println(str1);
+        System.out.println(set);
+
+//        set.add("a");
+//        set.add("c");
+//        set.add("b");
+//        System.out.println(set);
+    }
+    //遍历Map的方法
+    @Test
+    public void mapFor(){
+        //方法1：通过键找值遍历
+        Map<String,Object> map = new HashMap<>();
+        map.put("key1","value1");
+        map.put("key2","value2");
+        map.put("key3","value3");
+        for (String key : map.keySet()){
+            System.out.println(key+":"+map.get(key));
+        }
+    }
+    @Test
+    public void mapFor1(){
+        //方法1：通过foreach循环遍历
+        Map<String,Object> map = new HashMap<>();
+        map.put("key1","value1");
+        map.put("key2","value2");
+        map.put("key3","value3");
+        map.forEach((key,value) ->{
+            System.out.println(key + ":"+ value);
+        });
+    }
+
+    @Test
+    public void mapFor2(){
+        //方法1：通过stream流遍历
+        Map<String,Object> map = new HashMap<>();
+        map.put("key1","value1");
+        map.put("key2","value2");
+        map.put("key3","value3");
+        map.entrySet().stream().forEach((entry) ->{
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        });
+    }
+
+    @Test
+    public void arrayList(){
+        int a = 0;
+        int length = 2;
+        List<Integer> list = new ArrayList<>();
+        List<Integer> list1 = new ArrayList<>(length);
+        List<Map> list2 = new ArrayList<>();
+         long start = System.currentTimeMillis();
+        for (int i = 0 ; i<length;i++) {
+            if (a == 0) {
+                list.add(length);
+                list.add(11);
+            }
+        }
+         long end = System.currentTimeMillis();
+        System.out.println(list.toString()+":"+(end-start));
+        Map<String,Object> map = new HashMap<>();
+        map.put("key1","value1");
+        map.put("key2","value2");
+        map.put("key3","value3");
+        map.forEach((key,value)->{
+            System.out.println(key+value);
+        });
+        list2.add(map);
+        System.out.println(list2.toString());
+    }
+
 
 }
