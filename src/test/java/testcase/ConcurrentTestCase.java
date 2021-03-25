@@ -35,7 +35,8 @@ private List<String> sub_order_idList = new ArrayList<String>(){
 
 public void testSms(int n, int x) {
         int flag=n-1;
-        System.out.println("###"+timeDate()+"###"+pass_numberList.get(flag)+"|"+sub_order_idList.get(flag)+"[并发线程"+flag+"，"+x+"--"+n+"]=>>>"+ty_4(pass_numberList.get(flag), sub_order_idList.get(flag)));
+        System.out.println("###"+timeDate()+"###"+pass_numberList.get(flag)+"|"
+                +sub_order_idList.get(flag)+"[并发线程"+flag+"，"+x+"--"+n+"]=>>>"+ty_4(pass_numberList.get(flag), sub_order_idList.get(flag)));
         }
 
 public String timeDate(){
@@ -45,6 +46,7 @@ public String timeDate(){
 //线程并发执行入口
 @Test
 public void cyclicbarrierTest() {
+               //循环次数
             for (int x = 0; x < 1; x++) {
                     NoThread noThread = new NoThread();
                     int count = 2;//并发量
@@ -62,7 +64,6 @@ public void cyclicbarrierTest() {
                     }
                 }
             }
-
         }
 
 public class NoThread {
