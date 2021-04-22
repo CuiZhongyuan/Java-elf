@@ -57,10 +57,19 @@ mvn clean deploy -X -Dmaven.test.skip=true
 
 ```
 5、跳出接口测试误区，接口更适合做冒烟和回归测试。虽然接口测试的本质也是功能测试，但接口的测试粒度应该是根据后端接收参数处理逻辑来定。
+
 6、增加随机数据生成：
 ```
-     * Random(String[0,10])
-     * Random(Char[10)
-     * Random(Long[10])
-     * Random(Boolean)
+     Random(String[0,10])
+     Random(Char[10])
+     Random(Long[10])
+     Random(Boolean)
+入参数参数直接写随机函数即可，eg:
+{
+"data":{
+ "key1":"测试-numRandom(Long[2])",
+ "key2":"测试-Random(Char[3])"
+  }
+}
+//对应会生成：测试-num34的随机数和测试-jh的随机数
 ```
