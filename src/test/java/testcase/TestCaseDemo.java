@@ -222,5 +222,11 @@ public class TestCaseDemo {
         });
         System.out.println(JsonUtils.mapToJson(treeMap1));
     }
+    //测试随机数据的生成
+    @Test
+    public void getTestRandom(){
+        String str = RandomDataKit.randomDataStringInspect("测试-随机数Random(Long[3])");
+        System.out.println(str);
+    }
 
 }
