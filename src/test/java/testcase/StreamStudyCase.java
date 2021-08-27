@@ -14,6 +14,7 @@ public class StreamStudyCase {
     //初始化数组
     String[] arr = new String[] {"孙悟空","猪八戒","唐僧","唐僧"};
     Integer[] arrInt = new Integer[] {88,45,23,78};
+    String[] strList = new String[]{"test01","test002","test0003","test00004"};
 
     List<Map<String,Object>> list = new ArrayList<>();
     /**
@@ -190,6 +191,23 @@ public class StreamStudyCase {
         list2.add(map);
         System.out.println(list2.toString());
     }
+    /**
+     * 使用lambda 奥义一个接一个处理，直到业务处理完成
+     * */
+    @Test
+    public void lambadTest(){
+        List list = new ArrayList(Arrays.asList(strList));
+        list.stream().filter(s -> s.toString().length() > 7).forEach(System.out::println);
+    }
 
+    /**
+     * 使用collector 重新生产一个新的list
+     * */
+    @Test
+    public void lambdaList(){
+        List list = new ArrayList(Arrays.asList(strList));
+        List<String> list1 = (List<String>) list.stream().filter(s -> s.toString().length() > 7).collect(Collectors.toList());
+        list1.forEach(System.out::println);
+    }
 
 }

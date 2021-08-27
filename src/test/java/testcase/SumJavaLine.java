@@ -6,7 +6,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-
+/**
+ * 面试被问到统计一个文件有效代码行数的实现
+ * */
 public class SumJavaLine {
     private static int i;//代码总行数
     private static int j;//文件个数

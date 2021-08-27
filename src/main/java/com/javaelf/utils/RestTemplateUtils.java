@@ -185,7 +185,7 @@ public class RestTemplateUtils {
      * @param uriVariables URL中的变量，按顺序依次对应
      * @return ResponseEntity 响应对象封装类
      */
-    public static <T> ResponseEntity<T> post(String url, Map<String, String> headers, Object requestBody, Class<T> responseType, Object... uriVariables) {
+    public static <T> ResponseEntity<T> pclientTypeost(String url, Map<String, String> headers, Object requestBody, Class<T> responseType, Object... uriVariables) {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setAll(headers);
         return post(url, httpHeaders, requestBody, responseType, uriVariables);
