@@ -30,8 +30,7 @@ public class Test {
         System.out.println(orgData.size());
 
         ArrayList<String> strings = RandomParameter.requestBodyArrayList(orgData, otherPara);
-        for (String str : strings
-        ) {
+        for (String str : strings) {
             System.out.println(str);
         }
 
